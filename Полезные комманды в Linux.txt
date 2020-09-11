@@ -1,0 +1,31 @@
+
+
+1. Получение информации об запущенном приложении со всеми библиотеками
+
+lsof -P -T -p PID_APPLICATION
+
+admin1@ubuntu18:~$ lsof -P -T -p 19208
+    COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
+    acvp_app 19208 admin1  cwd    DIR   0,56     4096 4513806 /home/admin1/work/acvp/libacvp
+    acvp_app 19208 admin1  rtd    DIR   8,33     4096       2 /
+    acvp_app 19208 admin1  txt    REG   0,56   264560 4515598 /home/admin1/work/Development/ACVP/ACVP_PROJECT/SOURCE/libacvp/app/.libs/acvp_app
+    acvp_app 19208 admin1  mem    REG   8,33   577312  789094 /usr/lib/x86_64-linux-gnu/libssl.so.1.1
+    acvp_app 19208 admin1  mem    REG   8,33    14560 3148382 /lib/x86_64-linux-gnu/libdl-2.27.so
+    acvp_app 19208 admin1  mem    REG   8,33   144976 3148394 /lib/x86_64-linux-gnu/libpthread-2.27.so
+    acvp_app 19208 admin1  mem    REG   0,56  1019080 4514296 /home/admin1/work/Development/ACVP/ACVP_PROJECT/INSTALLATION/curl-7.64.1_install/lib/libcurl.so.4.5.0
+    acvp_app 19208 admin1  mem    REG   8,33  2030544 3148379 /lib/x86_64-linux-gnu/libc-2.27.so
+    acvp_app 19208 admin1  mem    REG   8,33  2917216  789091 /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
+    acvp_app 19208 admin1  mem    REG   0,56  1252488 4515751 /home/admin1/work/Development/ACVP/ACVP_PROJECT/INSTALLATION/libacvp_install/lib/libacvp.so.0.0.0
+    acvp_app 19208 admin1  mem    REG   8,33   170960 3148375 /lib/x86_64-linux-gnu/ld-2.27.so
+    acvp_app 19208 admin1    0u   CHR  136,3      0t0       6 /dev/pts/3
+    acvp_app 19208 admin1    1u   CHR  136,3      0t0       6 /dev/pts/3
+    acvp_app 19208 admin1    2u   CHR  136,3      0t0       6 /dev/pts/3
+
+2. Узнаём какие опции в файле конфигурации есть, связанные с отладкой
+
+admin1@ubuntu18:~/work/acvp/ACVP_PROJECT/SOURCE/curl-7.64.1$ ./configure --help | grep debug
+  --enable-debug          Enable debug build options
+  --disable-debug         Disable debug build options
+  --enable-curldebug      Enable curl debug memory tracking
+  --disable-curldebug     Disable curl debug memory tracking
+
