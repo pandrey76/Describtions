@@ -35,11 +35,20 @@ python3 -m pip install --upgrade pip
 
 4. Преобразование символа переноса на новую строку (CRLF, LF или CR)
 
-    а)    dos2unix file_path (Например: dos2unix install.sh)
+    4.1.    dos2unix file_path (Например: dos2unix install.sh)
 
-    б) Рекурсивно найдет все файлы внутри текущего каталога и вызовет для этих файлов команду dos2unix
+    4.2. Рекурсивно найдет все файлы внутри текущего каталога и вызовет для этих файлов команду dos2unix
 
-        find . -type f -print0 | xargs -0 dos2unix
+            find . -type f -print0 | xargs -0 dos2unix
 
+5. Удаление Директорий
 
+    5.1. To remove an empty directory, use the rmdir
+
+            rmdir veggies3
+
+    5.2  To remove a directory and all its contents, including any subdirectories and files, use the rm command
+            with the recursive option, -r.
+
+            rm -r veggies3
 
