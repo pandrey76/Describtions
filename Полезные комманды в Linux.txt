@@ -29,3 +29,8 @@ admin1@ubuntu18:~/work/acvp/ACVP_PROJECT/SOURCE/curl-7.64.1$ ./configure --help 
   --enable-curldebug      Enable curl debug memory tracking
   --disable-curldebug     Disable curl debug memory tracking
 
+3. Обновляем pip
+
+python3 -m pip install --upgrade pip
+
+4
