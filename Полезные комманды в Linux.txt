@@ -33,4 +33,13 @@ admin1@ubuntu18:~/work/acvp/ACVP_PROJECT/SOURCE/curl-7.64.1$ ./configure --help 
 
 python3 -m pip install --upgrade pip
 
-4
+4. Преобразование символа переноса на новую строку (CRLF, LF или CR)
+
+    а)    dos2unix file_path (Например: dos2unix install.sh)
+
+    б) Рекурсивно найдет все файлы внутри текущего каталога и вызовет для этих файлов команду dos2unix
+
+        find . -type f -print0 | xargs -0 dos2unix
+
+
+
