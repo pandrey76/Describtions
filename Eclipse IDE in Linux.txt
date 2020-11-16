@@ -1,0 +1,42 @@
+Install Eclipse on Ubuntu
+
+1. Eclipse IDE requires Java JRE as a prerequisite. Therefore, our first step is to install
+default-jre package. To do so run the bellow command:
+
+    $ sudo apt install default-jre
+
+
+2. Download the 64-bit Eclipse IDE for C/C++ Developers package
+
+Navigate to the official Eclipse website and download the 64-bit Eclipse IDE for C/C++ Developers package.
+Extract the Eclipse package downloaded in the previous step. Here we assume that the package has been downloaded into the Downloads directory.
+
+   https://www.eclipse.org/downloads/packages/release/kepler/sr2/eclipse-ide-cc-developers
+
+3. Extract the package into the "/opt" directory:
+
+    $ sudo tar xf eclipse-cpp-2019-12-R-linux-gtk-x86_64.tar.gz -C /opt
+
+4. Once the package has been extracted create a symbolic link to the /opt/eclipse/eclipse executable binary:
+
+    $ sudo ln -s /opt/eclipse/eclipse /usr/local/bin/
+
+5. From now on you should be able to start the Eclipse IDE simply by execution of the bellow command:
+
+    $ eclipse
+
+6. Create Eclipse IDE for C/C++ Developers desktop launcher. As an administrator create a new file called /usr/share/applications/eclipse.desktop using any text editor eg. nano:
+
+    $ sudo nano /usr/share/applications/eclipse.desktop
+
+Insert the following code:
+
+[Desktop Entry]
+Version = 2020‑06
+Type = Application
+Terminal = false
+Name = Eclipse C/C++
+Exec = /usr/local/bin/eclipse
+Icon = /opt/eclipse/icon.xpm
+Categories = Application;
+
