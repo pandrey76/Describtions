@@ -26,6 +26,7 @@ admin1@ubuntu18:~$ lsof -P -T -p 19208
 admin1@ubuntu18:~/work/acvp/ACVP_PROJECT/SOURCE/curl-7.64.1$ ./configure --help | grep debug
   --enable-debug          Enable debug build options
   --disable-debug         Disable debug build options
+
   --enable-curldebug      Enable curl debug memory tracking
   --disable-curldebug     Disable curl debug memory tracking
 
@@ -52,3 +53,21 @@ python3 -m pip install --upgrade pip
 
             rm -r veggies3
 
+6. Генерация SSL сертификата
+
+    6.1. sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+
+    Или
+
+    6.2. openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /home/admin1/ssl/selfsigned.key -out /home/admin1/ssl/selfsigned.crt
+
+
+7. Поиск с Regex
+    Ищем файлы вида: sandbox-gmon.16130
+
+    find . * | grep -P ".*sandbox-gmon[.].*"
+        или более точный
+     find .  -type f | grep -P ".*sandbox-gmon[.][0-9]*"
+
+    А теперь вместе с их удалением
+     find . -type f | grep -P ".*sandbox-gmon[.][0-9]*" | xargs rm

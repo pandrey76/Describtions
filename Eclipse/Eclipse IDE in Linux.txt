@@ -1,4 +1,6 @@
+
 Install Eclipse on Ubuntu
+########################################################################################################
 
 1. Eclipse IDE requires Java JRE as a prerequisite. Therefore, our first step is to install
 default-jre package. To do so run the bellow command:
@@ -39,4 +41,6 @@ Name = Eclipse C/C++
 Exec = /usr/local/bin/eclipse
 Icon = /opt/eclipse/icon.xpm
 Categories = Application;
+
+########################################################################################################
 

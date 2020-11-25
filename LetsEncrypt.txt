@@ -1,0 +1,12 @@
+
+1. Открываем браузер:
+
+    https://letsencrypt.org/getting-started/
+
+2. Жмём "Certbot"
+
+    https://certbot.eff.org
+
+3. Выбираем "Software" (Apache, Nginx т.д.).
+4. Выбираем "System" (Debian 9, Ubuntu и т.д.).
+5. Смотрим инструкцию и выполняем.

@@ -1,0 +1,107 @@
+# Добавление проета "libacvp" в Eclipse.
+
+1. Создаём рабочую директорию, например
+      /home/admin1/work/acvp/.
+
+2. Переписываем в неё скрипт libacvp.sh.
+
+
+3. Запускаем скрипт libacvp.sh.
+
+4. Переходим в директорию  /home/admin1/work/acvp/ и видим директорию:
+            ACVP_PROJECT
+                    - ARCHIVE;
+                    - INSTALLATION;
+                    - SOURCE.
+
+5. Запускаем Eclipse.
+
+6. Выбираем "Workspace", например:
+    /home/admin1/work/acvp/ACVP_PROJECT. и жмём "Launch".
+
+7. Идём в меню настроек и выбираем:
+    "File -> New -> Makefile Project With Existing Code".
+
+8.  В диалоге "import Existing Code" выбираем "Existing Code Location"
+    и устанавливаем следующий путь:
+
+    /home/admin1/work/acvp/ACVP_PROJECT/SOURCE/libacvp;
+    Далее выбираем "Toolchain for Indexer Settings"
+        Linux GCC
+        и жмём "Finish".
+
+9. Идём в "Project -> Properties";
+
+    9.1. В диалоге "Properties for libacvp" выбираем "C/C++ Build".
+
+    В диалоге C/C++ Build выбираем
+        "Configuration" -> "Default [Active]".
+
+    И выбираем вкладку "Behavior"
+
+    Во Frame "Workbench build Behavior" устанавливаем checkbox
+    "Build (Incremental build)" и оставляем EditBox пустым
+    (По умолчанию там прописано "all").
+
+    9.2. В Eclipse отсутствует абстракция типа "Post build" или "Pre build", поэтому предлагается для выполнения
+     данной логики применять bash скрипт, который и будет собирать и очищать, а также выполнять действия после
+     очистки или сборки.
+     Первым делом формируем скрипт (например: make.sh) следующего вида:
+
+    /////////////////////////////////////////////////////////
+
+        #!/bin/bash
+
+ 	    echo "First script parameter is $1"
+
+        if [[ "all" == $1 ]]
+        then
+	        make
+	        make install
+        elif [[ "clean" == $1 ]]
+        then
+ 	        make clean
+        elif [[ "install" == $1 ]]
+        then
+ 	        make install
+        else
+ 	        echo "$1 is wrong parameter"
+        fi
+
+    /////////////////////////////////////////////////////////
+
+        9.2.1. Далее в "Builder settings"-> "Build command" вводим:
+
+            ${workspace_loc:/libacvp}/make.sh
+
+        9.2.2. Во вкладке "Behavior" выставляем следующие checkboxes
+            Build on resource save (Auto build) -> "all"
+            Build (Incremental build)   -> "all"
+            Clean                       -> "clean"
+
+
+
+10. Идём в "Run -> Run Configuration";
+
+11. В диалоге "Run configuration" дважды кликаем на
+     "C/C++ Application", появляется конфигурация "libacvp Default".
+
+     Во вкладке "Main -> C/C++ Application" устанавливаем путь к
+     исполняемому файлу:
+     /home/admin1/work/acvp/ACVP_PROJECT/INSTALLATION/
+                                        /libacvp_install/bin/acvp_app.
+
+     Во вкладке "Arguments" пишем:
+        --all_algs
+            или
+        --dsa
+
+        Параметр "Working directory" установлен в ${workspace_loc:libacvp}
+
+     Во вкладке "Environment" пишем:
+        ACV_PORT      -> 8000;
+        ACV_SERVER    -> 127.0.0.1.
+        ACV_TOTP_SEED -> 1234567890
+    Жмём "Apply".
+
+12.  Запускаем "Run libacvp Default", всё должно работатьб в том числе и отладка!
