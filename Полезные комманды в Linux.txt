@@ -71,3 +71,7 @@ python3 -m pip install --upgrade pip
 
     А теперь вместе с их удалением
      find . -type f | grep -P ".*sandbox-gmon[.][0-9]*" | xargs rm
+
+8. Установка venv
+
+    python3 -m venv /path/to/new/virtual/environment
