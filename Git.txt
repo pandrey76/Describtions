@@ -1,0 +1,71 @@
+
+1. Создание репозитория на базе уже существующего:
+
+    $ git clone --verbose /home/admin1/acvp/acvpServer acvpServer
+
+        - /home/admin1/acvp/acvpServer - путь к локальному репозтьорию GIT;
+        - acvpServer - папка куда будет клонирован репозиторий (в данном случае будет создан в текущей папке);
+
+
+2. Добавление удалённого репозитория:
+
+     $ git remote add local /home/admin1/acvp/acvpServer
+
+3. Установка пути к удалённому репозиторию
+
+    $ git remote set-url local /home/admin1/work/acvp/acvpServer
+
+                или
+
+    git remote set-url origin /home/admin1/work/acvp/acvpServer/
+
+4. Посмотреть характеристики удалённого репозитория
+
+    $ git remote show local
+
+    * внешний репозиторий local
+        URL для извлечения: /home/admin1/work/acvp/acvpServer
+        URL для отправки: /home/admin1/work/acvp/acvpServer
+        HEAD ветка: master
+        Внешняя ветка:
+            master отслеживается
+        Локальная ссылка, настроенная для «git push»:
+            master будет отправлена в master (локальная ветка устарела)
+
+5. Удаление удалённого репозитория:
+
+    $ git remote rm local
+    $ git remote
+        origin
+
+6. Посмотреть настройки GIT:
+
+        $ git config --list
+            user.name=pandrey76
+            user.email=pandrey76@yandex.ru
+            core.autocrlf=true
+            core.editor=code
+            core.repositoryformatversion=0
+            core.filemode=false
+            core.bare=false
+            core.logallrefupdates=true
+            core.symlinks=false
+            core.ignorecase=true
+            remote.origin.url=/home/admin1/work/acvp/acvpServer
+            remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+            branch.master.remote=origin
+            branch.master.merge=refs/heads/master
+
+7. Посмотреть локальные настройки репозитория:
+
+        $ git config --local --list
+            core.repositoryformatversion=0
+            core.filemode=false
+            core.bare=false
+            core.logallrefupdates=true
+            core.symlinks=false
+            core.ignorecase=true
+            remote.origin.url=/home/admin1/work/acvp/acvpServer
+            remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+            branch.master.remote=origin
+            branch.master.merge=refs/heads/master
