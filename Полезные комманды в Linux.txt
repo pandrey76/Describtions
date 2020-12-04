@@ -75,3 +75,13 @@ python3 -m pip install --upgrade pip
 8. Установка venv
 
     python3 -m venv /path/to/new/virtual/environment
+
+9. Замена в файле с помощью команды sec
+
+    sed 's/test/another test/' myfile
+
+    Пример
+        sed -i 's!https://%s!http:\\%s!' acvp_transport.c
+        Замена "https://%s" на "http://%s"
+
+        В качестве разделителя может использоваться любой символ который идёт после 's' (/, ! и т.д.).
