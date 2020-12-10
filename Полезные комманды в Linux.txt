@@ -32,7 +32,7 @@ admin1@ubuntu18:~/work/acvp/ACVP_PROJECT/SOURCE/curl-7.64.1$ ./configure --help 
 
 3. Обновляем pip
 
-python3 -m pip install --upgrade pip
+у
 
 4. Преобразование символа переноса на новую строку (CRLF, LF или CR)
 
