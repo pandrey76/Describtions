@@ -1,0 +1,216 @@
+﻿1. Разрешаем выполненеи интерактивных сценариев PS
+Ничего не блокируется, никакие предупреждения и запросы не появляются.
+
+    Set-ExecutionPolicy Unrestricted
+
+
+2. Скрипты, подготовленные на локальном компьютере, можно запускать без ограничений,
+скрипты, загруженные из Интернета - только при наличии цифровой подписи.
+
+    Set-ExecutionPolicy AllSigned
+
+
+3. Разрешено выполнение любых скриптов. При запуске не подписанного скрипта,
+который был загружен из Интернета, программа может потребовать подтверждение.
+
+    Set-ExecutionPolicy RemoteSigned
+
+
+4. Блокируется выполнение любых скриптов. Значение по умолчанию.
+
+    Set-ExecutionPolicy Restricted
+
+
+5. Для выполнения выше представленных команд без подтверждения изменения, воспользуйтесь параметром
+ -Force, например выполните команду:
+    Теперь при выполнении команд не нужно подтверждать производимые изменения.
+
+    Set-ExecutionPolicy Bypass -Force
+
+
+6.  Get-ChildItem Env:
+Выведет все переменные EnvVarible.
+
+
+7. $Env:USERPROFILE
+Выведет параметр директории профиля пользователя (C:\Users\admin1)
+
+
+8. Set-Content перезаписывает целевой файл, а Add-Content - в файл.
+
+    Set-Content -Value "Test1" -Path C:\Scripts\Scratch\test.txt
+    Add-Content -Value "Test" -Path C:\Scripts\Scratch\test.txt
+
+
+9. Назначение пользователю прав на запуск только программы "Калькулятор"
+
+    Set-AssignedAccess -AppUserModelId $calculater_id!app -UserName $user
+
+
+10. Очищаем все огранияения, что ранее назначили
+
+       Clear-AssignedAccess
+
+11. Выход из системы активного пользователя
+
+    logoff
+
+12. Выход из системы залогиненного пользователя
+
+    logoff i
+
+    i - идентификатор сесии пользователя
+
+13. Список залогиненных пользователей в виде масива строк представленных в виде таблицы
+
+ ПОЛЬЗОВАТЕЛЬ          СЕАНС              ID  СТАТУС  БЕЗДЕЙСТВ. ВРЕМЯ ВХОДА
+>admin1                console             1  Активно         .   22.02.2019 7:38
+ ogurchuk                                  3  Диск            .   22.02.2019 8:11
+
+    $users = query user #(тоже самое команда - quser)
+
+    $users[0] - строка содержащая столбцы таблицы
+
+    $users[1] - строка содержащая admin1 (admin1     console      1  Активно    .   22.02.2019 7:38)
+    $users[1] - строка содержащая ogurchuk
+
+14. Выводит кучу всего по зарегистрированным пользователям, надо разобтрать.
+
+    Get-WmiObject Win32_LoggedOnUser -ComputerName $env:COMPUTERNAME
+
+15. Change account password using PowerShell
+
+Open Start.
+
+Search for PowerShell, right-click the top result, and select Run as administrator.
+
+Type the following command to list all the available accounts and press Enter:
+
+    Get-LocalUser
+
+Type the following command to create and store the new password inside of a variable and press Enter:
+
+    $Password = Read-Host "Enter the new password" -AsSecureString
+
+Type the new password for the account and press Enter.
+
+Type the following command and press Enter on each line to apply the new password to the local account:
+
+    $UserAccount = Get-LocalUser -Name "admin"
+    $UserAccount | Set-LocalUser -Password $Password
+
+In the second command, make sure to replace “admin” with the name of the account that you want to reset its password.
+
+Once you’ve completed the steps, sign out and sign back into your Windows 10 account using the new password.
+
+15. Create user
+
+PS C:\WINDOWS\system32> $Password = Read-Host -AsSecureString
+*****
+PS C:\WINDOWS\system32> New-LocalUser "TempUser" -Password $Password -FullName "Prapor" -Description "Some user"
+
+Name     Enabled Description
+----     ------- -----------
+TempUser True    Some user
+
+16. Added user in Group
+
+PS C:\WINDOWS\system32> Add-LocalGroupMember -Group "Пользователи" -Member "TempUser"
+
+
+17. Get current script folder
+
+PS C:\WINDOWS\system32> Split-Path -Parent $PSCommandPath
+
+
+18. Run command (Invoke-Expression)
+
+Go to up one folder:
+####################################################
+
+$UpFolder = "cd ..\"
+PS C:\WINDOWS\system32> Invoke-Expression $UpFolder 
+
+####################################################
+
+19. Checking for user in groupe of administrator
+####################################################
+
+ $NetEXE = $env:SystemDrive + "\windows\system32\net.exe localgroup administrators"
+ $UserStringFromNetCommand = Invoke-Expression $NetEXE | Where {$_ -eq $UserNameSuffix}
+     if(!([String]::IsNullOrEmpty($UserStringFromNetCommand)))
+    {
+        throw $SCStringTable.ErrorUserNotFound
+    }
+    
+####################################################
+
+20. Coping/Removing files with pattern
+####################################################
+
+Coping file
+/////////////////////////////////////////////////////
+
+PS C:\Work\GitHub\Describtions\PowerShell> Get-ChildItem -Path c:/Work/WindowsRemoteManeger/PS/PS_Supporting | Copy-Item -Destination c:/Work/GitHub/Describtions/PowerShell
+
+/////////////////////////////////////////////////////
+
+Coping files
+/////////////////////////////////////////////////////
+
+PS C:\Work\GitHub\Describtions\Python\RunProcess> Get-ChildItem -Path c:/Work/GitHub/Describtions/Python/RunProcess/Examples -Include * -Recurse | Copy-Item -Destination c:/work/GitHub/Describtions/Python/RunProcess
+
+/////////////////////////////////////////////////////
+
+Removing file
+/////////////////////////////////////////////////////
+
+PS C:\Work\GitHub\Describtions\PowerShell> Remove-Item -Path c:/Work/GitHub/Describtions/Python/RunProcess/main.py
+
+/////////////////////////////////////////////////////
+
+Removing files by template
+/////////////////////////////////////////////////////
+
+PS C:\Work\GitHub\Describtions\Python\RunProcess> ls
+
+
+    Каталог: C:\Work\GitHub\Describtions\Python\RunProcess
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       12.12.2020     12:53                .idea
+-a----       10.12.2020     16:12            288 HelloWorld.PS1
+-a----       10.12.2020     15:11            544 main.py
+-a----       10.12.2020     17:50            692 RunProcess.py
+-a----       10.12.2020     16:20           2020 temp.tep
+
+
+PS C:\Work\GitHub\Describtions\Python\RunProcess> Write-Host $(Get-ChildItem -Path c:\Work\GitHub\Describtions\Python\RunProcess -Exclude *.py,*.PS1)
+C:\Work\GitHub\Describtions\Python\RunProcess\.idea C:\Work\GitHub\Describtions\Python\RunProcess\temp.tep
+
+# The items in template must be spliting by symbol ','
+PS C:\Work\GitHub\Describtions\Python\RunProcess> Get-ChildItem -Path c:\Work\GitHub\Describtions\Python\RunProcess -Exclude *.py,*.PS1 | Remove-Item
+
+PS C:\Work\GitHub\Describtions\Python\RunProcess> ls
+
+
+    Каталог: C:\Work\GitHub\Describtions\Python\RunProcess
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       10.12.2020     16:12            288 HelloWorld.PS1
+-a----       10.12.2020     15:11            544 main.py
+-a----       10.12.2020     17:50            692 RunProcess.py
+
+/////////////////////////////////////////////////////
+####################################################
+
+21. Display result of PS commandlet work.
+####################################################
+
+PS C:\Work\GitHub\Describtions\Python\RunProcess> Write-Host $(Get-ChildItem -Path C:\Work\GitHub\Describtions\Python\RunProcess -Include *)
+
+####################################################
