@@ -85,3 +85,166 @@
 
         $ git config --bool core.bare true
 
+
+
+9. Instruction for setting .ssh folder to system user in Windows
+for git push work.
+####################################################
+    1. Using SSH keys
+
+Go to
+ C:\Windows\System32\config\systemprofile\.ssh
+
+ and copy keys from one to this
+
+ PS> Get-ChildItem -Path C:\Users\admin1\.ssh -Include * | Copy-Item -Destination  C:\Windows\System32\config\systemprofile\.ssh
+
+    Каталог: C:\Windows\System32\config\systemprofile\.ssh
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       09.04.2020     12:39           3247 id_rsa
+-a----       09.04.2020     12:39            745 id_rsa.pub
+-a----       13.12.2020      1:00           1672 known_hosts
+
+2. Https support
+# This command is cachin
+# git config --global credential.helper wincred
+his is not exactly what you asked for, but for http(s):
+
+you can put the password in .netrc file (_netrc on windows). From there it would be picked up automatically. It would go to your home folder with 600 permissions.
+you could also just clone the repo with https://user:pass@domain/repo but that's not really recommended as it would show your user/pass in a lot of places...
+a new option is to use the credential helper. Note that credentials would be stored in clear text in your local config using standard credential helper. credential-helper with wincred can be also used on windows.
+Usage examples for credential helper
+
+git config credential.helper store - stores the credentials indefinitely.
+git config credential.helper 'cache --timeout=3600'- stores for 60 minutes
+
+
+For ssh-based access, you'd use ssh agent that will provide the ssh key when needed. This would require generating keys on your computer, storing the public key on the remote server and adding the private key to relevant keystore.
+
+####################################################
+
+10. Что записано в файле .ssh/known_hosts.
+####################################################
+
+В данном файле хранится соответствие открытого ключ имени или IP сервера,
+для которого разрешён доступ по протоколу ssh.
+
+Но если как у github.com есть огромное количество ip адресов то по идее
+в файл known_hosts необходимо ставить соответствие IP -> PubKey для каждого.
+
+Данная ошибка произошла со службой скорей всего было выдано сообщение вида
+
+The authenticity of host '192.168.0.2 (192.168.0.2)' can't be established.
+RSA key fingerprint is SHA256:kd9mRkEGLo+RBBNpxKp7mInocF3/Yl/0fXRsGJ2JfYg.
+Are you sure you want to continue connecting (yes/no)?
+
+и произошло зависание.
+
+Поэтому надо определять текущий IP github.com и автоматически его добавлять в
+файл known_hosts при работе со службой.
+
+Получить IP сервера можно командой ping
+///////////////////////////////////////////////////
+    PS C:\WINDOWS\system32> ping github.com
+
+        Обмен пакетами с github.com [140.82.121.4] с 32 байтами данных:
+        Ответ от 140.82.121.4: число байт=32 время=68мс TTL=54
+        Ответ от 140.82.121.4: число байт=32 время=81мс TTL=54
+        Ответ от 140.82.121.4: число байт=32 время=285мс TTL=54
+        Ответ от 140.82.121.4: число байт=32 время=92мс TTL=54
+
+        Статистика Ping для 140.82.121.4:
+            Пакетов: отправлено = 4, получено = 4, потеряно = 0
+            (0% потерь)
+            Приблизительное время приема-передачи в мс:
+            Минимальное = 68мсек, Максимальное = 285 мсек, Среднее = 131 мсек
+
+Тоесть обработать вывод команды ping и получить IP (140.82.121.4)
+
+///////////////////////////////////////////////////
+
+Вариант №1
+    Команда ssh-keyscan github.com или (ssh-keyscan.exe github.com)
+
+    140.82.121.4 ssh-rsa AAAAB3NzaC1yc ......
+
+    1. Имя носта или IP до пробела. (140.82.121.4)
+    2. Алгоритм (ssh-rsa)
+    3. Публичный ключ (AAAAB3NzaC1yc ......)
+
+
+Вариант №2
+    Команда ssh-keyscan -H github.com или (ssh-keyscan.exe -H github.com)
+    Здесь происходит хэширование имени сервера
+
+    |1|CuXixZ+EWfgz40wpkMugPHPalyk=|KNoVhur7z5NAZmNndtwWq0kN1SQ=
+
+    На самом деле тут может быть записано и имя хоста в открытом виде
+    или маска, задающая множество допустимых имён. Но у меня по умолчанию
+    сохраняется хэшированое имя. Запись разделена на 3 части символом "|".
+    Первая часть — алгоритм хэширования. «1» соответствует HMAC-SHA1 (других
+     не видел). Вторая часть — соль (ключ для HMAC). Третья часть —
+     собственно хэш (вывод HMAC).
+
+     Проверка
+
+    from base64 import b64decode
+    import hmac
+
+    salt = b64decode("CuXixZ+EWfgz40wpkMugPHPalyk=")
+    host = b'192.168.0.2'
+    hash = hmac.HMAC(salt, host, 'sha1').digest()
+    print(b64encode(hash).decode())
+
+    > 'KNoVhur7z5NAZmNndtwWq0kN1SQ='
+
+
+    Ассиметричный алгоритм
+
+В RFC-4253 перечислены 4 ассиметричных алгоритма: ssh-dss (по стандарту обязательный, но считается слабым и начиная с OpenSSH7.0 выключен по-умолчанию), ssh-rsa (рекомендуемый), pgp-sign-rsa (опциональный), pgp-sign-dss (опциональный). По умолчанию в Linux генерируются ключи первых двух видов и для не упомянутых в RFC алгоритмов на эллиптических кривых. Предпочтение отдаётся последним, однако клиент может выбрать алгоритм опцией HostKeyAlgorithms.
+
+Как проверить нужный (не по-умолчанию) отпечаток ключа
+Это может быть полезно если, например, при первом заходе на сервер вы хотите проверить отпечаток ключа, а знаете только отпечаток ключа ssh-rsa. Тогда можно подключиться такой командой:
+ssh root@192.168.0.2 -o HostKeyAlgorithms=ssh-rsa
+
+Если нужно задать ещё и алгоритм хэширования ключа, то можно использовать опцию FingerprintHash. Например, если известен только md5 от ssh-rsa можно подключиться так:
+ssh root@192.168.0.2 -o HostKeyAlgorithms=ssh-rsa -o FingerprintHash=md5
+
+
+Публичный ключ
+
+Публичный ключ в known_hosts совпадает с тем, который записан в файле /etc/ssh/ssh_host_rsa_key.pub на сервере (вместо rsa подставить название используемого алгоритма). Если снять Base64 кодирование, то внутри будет ещё раз название алгоритма и собственно компоненты ключа.
+
+А чего бы и не снять Base64
+b'\x00\x00\x00\x07ssh-rsa\x00\x00\x00\x03\x01\x00\x01\x00\x00\x01\x01\x00\x9e\x88^\x0e8\xe5!Z\xf3\x98\xae\x1f\xde\xe2\xafu\xfa,\xfe\x8b\xd4\xb4\xb3s6,\xfa\xbe\x18\x08Q\x96\x12\xad\xe6\xf2\xb2\x11Wz\xc7\xa9\xb6\xe9\xc7=\xf1\x8f\x92Ay\xc2\x07\xd1\x96yV$\xf29E\x1cE\xe7c\x86\x16yb\xc3\xc1r!\x1c\x12X\xb7\x9c\xb3\xde>V\x92\x0fy\xc7\xe9\x8f\xbc\xefE- d\xfc\tv\x19\xb1\xf9\xab\xa1~\x85\x92%.c\xbar"\x12\x99~\x13\xb5\xc1\xb5\xb3\x0e\x12\xc2\x84\xc0\x0e\xba\xe1t\xcd\x0e%\xdf\x9c\xe4%<\x8a\xa0\x9bs\xa3\xf3\x9d\x86\xcbep\xaf\xa8\xf6SY\xe4\x9bL\xb5\x1cR\xedS\x8b\xee\xf1\x1b\x04\xfc\x0c_\xad#"\xc5qO\xb3\xc5\xdd\x10\x9f\x02Hl\xdb\xde\xc2A\xec\xd0\xbb\x0c9aU??\xcdwE\xe2Ux\xa6_\xeb\xa0\x080Y\xff\x8a\xbc5L\x07\xf5!\xb3\x08\xc0/\x9ez\xfe\x0fR<_k\xe1J\xe4lN\xc4\x17/\x93\xf7\xbd\xff\x1e\x94<Ot:\xcc\'3m\x94\x10\x9b-l\xd5'
+Видно, что идут 4 байта, в которые записана длина поля, потом само поле и т.д. Первое поле — название алгоритма, остальные зависят от конкретного алгоритма. В приведённом выше ключе 3 поля:
+b'ssh-rsa' - название
+b'\x01\x00\x01' - публичная экспонента
+b'\x00\x9e\x88^\x0e8\xe5!Z\xf3\x98\xae\x1f\xde\xe2\xafu\xfa,\xfe\x8b\xd4\xb4\xb3s6,\xfa\xbe\x18\x08Q\x96\x12\xad\xe6\xf2\xb2\x11Wz\xc7\xa9\xb6\xe9\xc7=\xf1\x8f\x92Ay\xc2\x07\xd1\x96yV$\xf29E\x1cE\xe7c\x86\x16yb\xc3\xc1r!\x1c\x12X\xb7\x9c\xb3\xde>V\x92\x0fy\xc7\xe9\x8f\xbc\xefE- d\xfc\tv\x19\xb1\xf9\xab\xa1~\x85\x92%.c\xbar"\x12\x99~\x13\xb5\xc1\xb5\xb3\x0e\x12\xc2\x84\xc0\x0e\xba\xe1t\xcd\x0e%\xdf\x9c\xe4%<\x8a\xa0\x9bs\xa3\xf3\x9d\x86\xcbep\xaf\xa8\xf6SY\xe4\x9bL\xb5\x1cR\xedS\x8b\xee\xf1\x1b\x04\xfc\x0c_\xad#"\xc5qO\xb3\xc5\xdd\x10\x9f\x02Hl\xdb\xde\xc2A\xec\xd0\xbb\x0c9aU??\xcdwE\xe2Ux\xa6_\xeb\xa0\x080Y\xff\x8a\xbc5L\x07\xf5!\xb3\x08\xc0/\x9ez\xfe\x0fR<_k\xe1J\xe4lN\xc4\x17/\x93\xf7\xbd\xff\x1e\x94<Ot:\xcc\'3m\x94\x10\x9b-l\xd5' - модуль N (0x101 * 8 = 2048 бит)
+
+
+Отпечаток ключа (Fingerprint)
+
+Отпечаток ключа, который предлагается сверить при первом подключении — это соответствующий хэш (в примере — SHA256) от публичного ключа из прошлого пункта и из /etc/ssh/ssh_host_rsa_key.pub, закодированный в base64 для хэш функций семейства SHA или в hex для MD5.
+
+Считаем
+from hashlib import sha256
+from base64 import b64decode, b64encode
+pub_key_bin = b64decode("AAAAB3NzaC1yc2EAAAADAQABAAABAQCeiF4OOOUhWvOYrh/e4q91+iz+i9S0s3M2LPq+GAhRlhKt5vKyEVd6x6m26cc98Y+SQXnCB9GWeVYk8jlFHEXnY4YWeWLDwXIhHBJYt5yz3j5Wkg95x+mPvO9FLSBk/Al2GbH5q6F+hZIlLmO6ciISmX4TtcG1sw4SwoTADrrhdM0OJd+c5CU8iqCbc6PznYbLZXCvqPZTWeSbTLUcUu1Ti+7xGwT8DF+tIyLFcU+zxd0QnwJIbNvewkHs0LsMOWFVPz/Nd0XiVXimX+ugCDBZ/4q8NUwH9SGzCMAvnnr+D1I8X2vhSuRsTsQXL5P3vf8elDxPdDrMJzNtlBCbLWzV")
+hash = sha256(pub_key_bin).digest()
+fingerprint = b64encode(hash)
+print(fingerprint)
+
+> b'kd9mRkEGLo+RBBNpxKp7mInocF3/Yl/0fXRsGJ2JfYg='
+
+Видим, что хэш и правда совпадает с отпечатком, показанным при первом подключении (цитата в начале статьи), с точностью до символа "=" в конце.
+
+Тут небольшая программка для поиска хостов в файле known_hosts, появившаяся в процессе экспериментов.
+https://github.com/Nokta-strigo/known_hosts_parser/blob/master/known_hosts_parser.py
+
+Ссылка на основную статью
+https://habr.com/ru/post/421477/
+####################################################
+# PS C:\Windows\System32\config\systemprofile\.ssh> Get-ChildItem -Path C:\Users\admin1\.ssh -Include * | Copy-Item -Destination  C:\Windows\System32\config\systemprofile\.ssh
+# Каталог: C:\Windows\System32\config\systemprofile
