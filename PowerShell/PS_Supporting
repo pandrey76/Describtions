@@ -247,3 +247,84 @@ Mode                LastWriteTime         Length Name
 -a----       13.12.2020      1:00           1672 known_hosts
 
 ####################################################
+
+
+23. Invoke-Expression by Invoke-Command
+####################################################
+
+PS C:\Work\WindowsRemotemaneger> Invoke-Expression "Invoke-Command -ScriptBlock {Start-Process -FilePath git.exe -Args remote -RedirectStandardError c:/err -RedirectStandardOutput c:/out -Wait}"
+
+Теперь мы можем успешно логировать все запускаемые командлеты.
+
+PS C:\Work\WindowsRemotemaneger> Invoke-Expression "Invoke-Command -ScriptBlock {(Get-ChildItem -Path c:\Work\WindowsRemoteManeger | Out-String)}"
+
+
+    Каталог: C:\Work\WindowsRemoteManeger
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       16.12.2020     18:56                .git
+d-----       16.12.2020     20:09                .idea
+d-----       09.12.2020     12:10                Actions
+d-----       09.12.2020     12:10                Common
+d-----       15.12.2020     19:42                Engines
+d-----       14.12.2020     19:14                Mailing
+d-----       15.12.2020     18:22                PS
+d-----       09.12.2020     12:10                test
+d-----       09.12.2020     16:26                __pycache__
+-a----       09.12.2020     12:10             25 .gitignore
+-a----       09.12.2020     12:10           8569 ActivateEngine.py
+-a----       09.12.2020     12:10          10548 EnginesDescribtion.txt
+-a----       09.12.2020     12:10           3809 Task_Scheduler_Svc.py
+
+или так
+
+PS C:\Work\WindowsRemotemaneger> $Temp = "c:\Work\WindowsRemoteManeger"
+PS C:\Work\WindowsRemotemaneger> Invoke-Expression "Invoke-Command -ScriptBlock {(Get-ChildItem -Path $Temp | Out-String)}"
+
+    Каталог: C:\Work\WindowsRemoteManeger
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       16.12.2020     18:56                .git
+d-----       16.12.2020     20:09                .idea
+d-----       09.12.2020     12:10                Actions
+d-----       09.12.2020     12:10                Common
+d-----       15.12.2020     19:42                Engines
+d-----       14.12.2020     19:14                Mailing
+d-----       15.12.2020     18:22                PS
+d-----       09.12.2020     12:10                test
+d-----       09.12.2020     16:26                __pycache__
+-a----       09.12.2020     12:10             25 .gitignore
+-a----       09.12.2020     12:10           8569 ActivateEngine.py
+-a----       09.12.2020     12:10          10548 EnginesDescribtion.txt
+-a----       09.12.2020     12:10           3809 Task_Scheduler_Svc.py
+
+а можно и так
+
+PS C:\Work\WindowsRemotemaneger> $Temp1 = Invoke-Expression "Invoke-Command -ScriptBlock {(Get-ChildItem -Path $Temp | Out-String)}"
+PS C:\Work\WindowsRemotemaneger> $Temp1
+
+
+    Каталог: C:\Work\WindowsRemoteManeger
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       16.12.2020     18:56                .git
+d-----       16.12.2020     20:09                .idea
+d-----       09.12.2020     12:10                Actions
+d-----       09.12.2020     12:10                Common
+d-----       15.12.2020     19:42                Engines
+d-----       14.12.2020     19:14                Mailing
+d-----       15.12.2020     18:22                PS
+d-----       09.12.2020     12:10                test
+d-----       09.12.2020     16:26                __pycache__
+-a----       09.12.2020     12:10             25 .gitignore
+-a----       09.12.2020     12:10           8569 ActivateEngine.py
+-a----       09.12.2020     12:10          10548 EnginesDescribtion.txt
+-a----       09.12.2020     12:10           3809 Task_Scheduler_Svc.py
+
+####################################################
