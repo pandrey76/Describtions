@@ -328,3 +328,84 @@ d-----       09.12.2020     16:26                __pycache__
 -a----       09.12.2020     12:10           3809 Task_Scheduler_Svc.py
 
 ####################################################
+
+
+24. Enable and Disable Users Command
+####################################################
+
+PS C:\Work\WindowsRemoteManeger\PS> Disable-LocalUser -Name Ogurchuk
+
+PS C:\Work\WindowsRemoteManeger\PS> Enable-LocalUser -Name Ogurchuk
+
+PS C:\> Get-LocalUser -Name "Administrator" | Enable-LocalUser
+
+    This command gets the built-in Administrator account by using Get-LocalUser , and then passes it to the current cmdlet by using the pipeli
+    ne operator. That cmdlet enables that account.
+PS C:\> Get-LocalUser Guest | Disable-LocalUser
+
+    This command gets the built-in Guest account by using Get-LocalUser , and then passes it to the current cmdlet by using the pipeline opera
+    tor. That cmdlet disables that account.
+
+####################################################
+
+25. Command to Work With Local Users
+####################################################
+
+Getting all local user info
+
+PS C:\Work\WindowsRemoteManeger\PS> Get-LocalUser | Select *
+
+
+AccountExpires         :
+Description            :
+Enabled                : True
+FullName               :
+PasswordChangeableDate : 18.02.2019 8:11:59
+PasswordExpires        :
+UserMayChangePassword  : True
+PasswordRequired       : False
+PasswordLastSet        : 18.02.2019 8:11:59
+LastLogon              : 17.12.2020 10:32:46
+Name                   : admin1
+SID                    : S-1-5-21-2772757386-1096924173-415189654-1001
+PrincipalSource        : Local
+ObjectClass            : Пользователь
+
+AccountExpires         :
+Description            :
+Enabled                : True
+FullName               : admin2
+PasswordChangeableDate : 17.12.2020 10:38:33
+PasswordExpires        :
+UserMayChangePassword  : True
+PasswordRequired       : True
+PasswordLastSet        : 17.12.2020 10:38:33
+LastLogon              :
+Name                   : admin2
+SID                    : S-1-5-21-2772757386-1096924173-415189654-1003
+PrincipalSource        : Local
+ObjectClass            : Пользователь
+
+
+Getting disabled local user
+
+PS C:\Work\WindowsRemoteManeger\PS> Get-LocalUser | where {$_.Enabled -eq $False}
+Name               Enabled Description
+----               ------- -----------
+DefaultAccount     False   Учетная запись пользователя, управляемая системой.
+WDAGUtilityAccount False   Учетная запись пользователя, которая управляется и используется системой для сценариев Application Guard в Защит...
+Администратор      False   Встроенная учетная запись администратора компьютера/домена
+Гость              False   Встроенная учетная запись для доступа гостей к компьютеру или домену
+
+PS C:\Work\WindowsRemoteManeger\PS> Disable-LocalUser -Name Ogurchuk
+PS C:\Work\WindowsRemoteManeger\PS> Get-LocalUser | where {$_.Enabled -eq $False}
+
+Name               Enabled Description
+----               ------- -----------
+DefaultAccount     False   Учетная запись пользователя, управляемая системой.
+Ogurchuk           False
+WDAGUtilityAccount False   Учетная запись пользователя, которая управляется и используется системой для сценариев Application Guard в Защит...
+Администратор      False   Встроенная учетная запись администратора компьютера/домена
+Гость              False   Встроенная учетная запись для доступа гостей к компьютеру или домену
+
+####################################################
