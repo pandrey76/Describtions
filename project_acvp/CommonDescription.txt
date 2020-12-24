@@ -1,0 +1,41 @@
+
+1. Назначение конкретных указателей на криптофункции в acvp_app.
+#######################################################################################################################
+File: app_main.c
+
+Function: main()
+Line: 283
+Code:
+      if (cfg.cmac) {
+        if (enable_cmac(ctx)) goto end;
+        }
+
+
+   rv = acvp_cap_cmac_enable(ctx, ACVP_CMAC_AES, &app_cmac_handler);
+
+
+Function: static int enable_cmac(ACVP_CTX *ctx)
+Line:   1136
+Code:
+       //Здесь мы конкретно устанавливаем указатель на функцию из библиотеки OpenSSL
+       rv = acvp_cap_cmac_enable(ctx, ACVP_CMAC_AES, &app_cmac_handler);
+
+
+File:   Src/acvp_capabilities.c
+
+Line: 2646
+
+Code:
+    ACVP_RESULT acvp_cap_cmac_enable(ACVP_CTX *ctx,
+                                 ACVP_CIPHER cipher,
+                                 int (*crypto_handler)(ACVP_TEST_CASE *test_case)) {
+
+Description:
+        Эта функция библиотеки libacvp и она принимает указатель на функцию (прототип). В самой библиотеки всё нормально,
+необходимо попробывать встроить интерфейсный уровень между библиотекой и приложением acvp_app.
+
+#######################################################################################################################
+
+2. Регистрация модуля
+
+Пример данных для регистрации находится в файле: libacvp/test/json/meta.json.
