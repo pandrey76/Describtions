@@ -85,3 +85,64 @@ python3 -m pip install --upgrade pip
         Замена "https://%s" на "http://%s"
 
         В качестве разделителя может использоваться любой символ который идёт после 's' (/, ! и т.д.).
+
+10. Кодирование/Декодирование в base64
+
+Кодирование строк
+///////////////////////////////////////////////
+
+admin1@ubuntu18:~$ echo "1234567890" | base64
+MTIzNDU2Nzg5MAo=
+admin1@ubuntu18:~$ Encoded=$(echo "1234567890" | base64)
+admin1@ubuntu18:~$ $Encoded
+MTIzNDU2Nzg5MAo=: команда не найдена
+
+///////////////////////////////////////////////
+
+Декодирование строк
+///////////////////////////////////////////////
+
+admin1@ubuntu18:~$ echo "MTIzNDU2Nzg5MAo="|base64 --decode
+1234567890
+admin1@ubuntu18:~$ echo $Encoded|base64 --decode
+1234567890
+
+или с пробелами
+
+admin1@ubuntu18:~$ echo $Encoded | base64 --decode
+1234567890
+
+///////////////////////////////////////////////
+
+Кодирование файла
+///////////////////////////////////////////////
+
+
+admin1@ubuntu18:~$ echo "Some string for demonstrating base64 encoding and decoding" > Some.txt
+admin1@ubuntu18:~$ cat Some.txt
+Some string for demonstrating base64 encoding and decoding
+
+admin1@ubuntu18:~$ base64 Some.txt
+U29tZSBzdHJpbmcgZm9yIGRlbW9uc3RyYXRpbmcgYmFzZTY0IGVuY29kaW5nIGFuZCBkZWNvZGlu
+Zwo=
+
+admin1@ubuntu18:~$ base64 Some.txt > encodedData.txt
+admin1@ubuntu18:~$ cat encodedData.txt
+U29tZSBzdHJpbmcgZm9yIGRlbW9uc3RyYXRpbmcgYmFzZTY0IGVuY29kaW5nIGFuZCBkZWNvZGlu
+Zwo=
+
+///////////////////////////////////////////////
+
+Декодирование файла
+///////////////////////////////////////////////
+
+admin1@ubuntu18:~$ base64 -d encodedData.txt
+Some string for demonstrating base64 encoding and decoding
+admin1@ubuntu18:~$ base64 --decode encodedData.txt > originalData.txt
+admin1@ubuntu18:~$ cat originalData.txt
+Some string for demonstrating base64 encoding and decoding
+
+///////////////////////////////////////////////
+
+
+
