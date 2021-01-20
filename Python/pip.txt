@@ -1,0 +1,16 @@
+1. Загрузка и установка пакеты Python локально.
+
+##########################################################################################
+
+Having requirements in requirements.txt and egg_dir as a directory
+
+you can build your local cache:
+
+    $ pip download -r requirements.txt -d eggs_dir
+
+then, using that "cache" is simple like:
+
+    $ pip install -r requirements.txt --find-links=eggs_dir
+
+##########################################################################################
+
