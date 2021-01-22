@@ -87,6 +87,39 @@
 
 
 
+   Внимание! Первая команда (git init --bare) сработала, но при этом (git push) не работала, ругалась на то,что не
+правильно выставлена HEAD репозитория.
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer$ git remote show origin
+* внешний репозиторий origin
+  URL для извлечения: /media/admin1/9269-8EE1/local_git_reprs/CryptographyVerificationServer
+  URL для отправки: /media/admin1/9269-8EE1/local_git_reprs/CryptographyVerificationServer
+  HEAD ветка: master
+  Внешняя ветка:
+    master отслеживается
+  Локальная ветка, настроенная для «git pull»:
+    master будет слита с внешней веткой master
+  Локальная ссылка, настроенная для «git push»:
+!!!!    master будет отправлена в master (возможна перемотка вперед)
+
+    После того как к репозиторию, который находится на на внешнем носителе, применил команду
+    (git config --bool core.bare true):
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer$ git remote show origin
+* внешний репозиторий origin
+  URL для извлечения: /media/admin1/9269-8EE1/local_git_reprs/CryptographyVerificationServer
+  URL для отправки: /media/admin1/9269-8EE1/local_git_reprs/CryptographyVerificationServer
+  HEAD ветка: master
+  Внешняя ветка:
+    master отслеживается
+  Локальная ветка, настроенная для «git pull»:
+    master будет слита с внешней веткой master
+  Локальная ссылка, настроенная для «git push»:
+!!!    master будет отправлена в master (уже актуальна)
+
+    Всё стало работать корректно и "git pull" и "git push".
+
+
 9. Instruction for setting .ssh folder to system user in Windows
 for git push work.
 ####################################################
