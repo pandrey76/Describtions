@@ -1,6 +1,10 @@
+aiocontextvars==0.2.2
 cffi==1.14.4
+contextvars==2.4
 cryptography==3.3.1
+immutables==0.14
 jwcrypto==0.8
+loguru==0.5.3
 pkg-resources==0.0.0
 pycparser==2.20
 six==1.15.0
