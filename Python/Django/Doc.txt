@@ -1,0 +1,48 @@
+
+1. Миграции
+########################################################################################################################
+
+    По каким-то не понятным для меня причинам создать новые модели и добавить их в базу удалось только так:
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ python3 manage.py makemigrations
+
+No changes detected
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ python3 manage.py makemigrations core
+
+Migrations for 'core':
+  core/migrations/0001_initial.py
+    - Create model TestData
+    - Create model TestSession
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ python3 manage.py makemigrations core
+
+Migrations for 'core':
+  core/migrations/0001_initial.py
+    - Create model TestData
+    - Create model TestSession
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ python3 manage.py makemigrations core
+Migrations for 'core':
+  core/migrations/0001_initial.py
+    - Create model Version
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ python3 manage.py migrate core
+
+Operations to perform:
+  Apply all migrations: core
+Running migrations:
+  Applying core.0001_initial... OK
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ python3 manage.py shell
+
+Python 3.6.9 (default, Oct  8 2020, 12:12:24)
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.13.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from core.models import Version
+
+In [2]: Version.objects.create(major=1, minor=0)
+Out[2]: <Version: Version object (1)>
+
+########################################################################################################################
