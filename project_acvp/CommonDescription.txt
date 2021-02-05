@@ -39,3 +39,6 @@ Description:
 2. Регистрация модуля
 
 Пример данных для регистрации находится в файле: libacvp/test/json/meta.json.
+
+
+3. Генератор тестовых данных в формате json находится в папаке "libacvp/test/json" файл 'generaye_json.py'.
