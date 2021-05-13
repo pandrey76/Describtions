@@ -112,6 +112,19 @@ admin1@ubuntu18:~$ echo $Encoded|base64 --decode
 admin1@ubuntu18:~$ echo $Encoded | base64 --decode
 1234567890
 
+
+admin1@ubuntu18:~$ echo "1234567890" | base64
+MTIzNDU2Nzg5MAo=
+admin1@ubuntu18:~$ echo "MTIzNDU2Nzg5MAo=" | base64 --decode
+1234567890
+
+Значение b"MTIzNDU2Nzg5MA==" получено с помощью Python (библиотека base64)
+
+admin1@ubuntu18:~$ echo "MTIzNDU2Nzg5MA==" | base64 --decode
+1234567890admin1@ubuntu18:~$
+admin1@ubuntu18:~$ echo "MTIzNDU2Nzg5MA==" | base64 --decode
+1234567890admin1@ubuntu18:~$
+
 ///////////////////////////////////////////////
 
 Кодирование файла
