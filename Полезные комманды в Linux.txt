@@ -176,3 +176,17 @@ This will exclude searching all the files ending with .o extension:
 For directories it's possible to exclude one or more directories using the --exclude-dir parameter. For example, this will exclude the dirs dir1/, dir2/ and all of them matching *.dst/:
     grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"
 ///////////////////////////////////////////////
+
+# Compressed folder by zip
+///////////////////////////////////////////////
+
+zip -r uchastok_2021.06.15.zip ./uchastok
+
+///////////////////////////////////////////////
+
+# Uncompressed
+///////////////////////////////////////////////
+
+unzip uchastok_2021.06.15.zip
+
+///////////////////////////////////////////////
