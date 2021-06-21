@@ -46,3 +46,23 @@ In [2]: Version.objects.create(major=1, minor=0)
 Out[2]: <Version: Version object (1)>
 
 ########################################################################################################################
+
+# Make fixtures from current application and model
+########################################################################################################################
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ python3 ./manage.py dumpdata core.HashTestCase \
+                            --format=json > /home/admin1/acvp/CryptographyVerificationServer/fixtures/initial_data.json
+
+or
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ python3 ./manage.py dumpdata core.CVPServerConfig \
+                            --format=json > /home/admin1/acvp/CryptographyVerificationServer/fixtures/initial_data.json
+########################################################################################################################
+
+# Load to DB from fixtures for current django application and models
+########################################################################################################################
+
+(env) admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ python3 ./manage.py loaddata \
+                /home/admin1/acvp/CryptographyVerificationServer/fixtures/initial_data.json --app core.CVPServerConfig
+
+########################################################################################################################
