@@ -1,0 +1,9 @@
+1. Поиск запушенных процессов
+
+admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ ps aux | grep python
+
+2. Удаление всех процессов с заданным именем
+
+В данном примере удалятся все процессы '/home/admin1/acvp/CryptographyVerificationServer/backend/env/bin/python3'
+
+admin1@ubuntu18:~/acvp/CryptographyVerificationServer/backend$ ps -ef | grep '/home/admin1/acvp/CryptographyVerificationServer/backend/env/bin/python3' | grep -v grep | awk '{print $2}' | xargs -r kill -9
