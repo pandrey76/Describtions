@@ -270,3 +270,9 @@ Host myip.opendns.com not found: 3(NXDOMAIN)
 Host myip.opendns.com not found: 3(NXDOMAIN)
 
 ///////////////////////////////////////////////
+
+# Running script or command in shell with scheduling
+
+# Remoning files matching with pattern every 5 secongs
+$ watch -n 5 "find . -type f | grep -P 'testSession_([[:digit:]]+).json' | xargs rm"
+
