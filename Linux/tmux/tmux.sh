@@ -13,13 +13,13 @@ tmux new-session -s run-watch-fork \; \
    send-keys 'echo Activate third pane!' C-m \; \
    select-pane -D \; \
    split-window -h \; \
-   send-keys 'echo Forth pane!' C-m \; \
-   send-keys 'echo Activate forth pane!' C-m \; \
+   send-keys 'watch -n 5 "find . -type f | grep -P 'DEBUG_CryptographyVerificationServer\.*' | xargs rm"' C-m \; \
    split-window -h \; \
-   send-keys 'echo Fifth pane!' C-m \; \
-   send-keys 'echo Activate fifth pane!' C-m \; \
+   send-keys 'watch -n 5 "find . -type f | grep -P 'testSession_[0-9]+.json' | xargs rm"' C-m \; \
    select-pane -U \; \
    split-window -h \; \
-   send-keys 'watch -n 5 "find . -type f | grep -P 'DEBUG_CryptographyVerificationServer\.*' | xargs rm"' C-m \; \
+   send-keys 'echo Forth pane!' C-m \; \
+   send-keys 'echo Activate forth pane!' C-m \; \
    split-window -v \; \
-   send-keys "watch -n 5 "find . -type f | grep -P 'testSession_([[:digit:]]+).json' | xargs rm"" C-m \; \
+   send-keys 'echo Fifth pane!' C-m \; \
+   send-keys 'echo Activate fifth pane!' C-m \; \
