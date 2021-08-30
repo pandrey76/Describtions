@@ -1,0 +1,10 @@
+<!-- также можно использовать другую запись для импорта
+{% from 'dialogs.htm' import dialog_1 as dlg %}
+или
+{% from 'dialogs.htm' import dialog_1 %}
+-->
+{% import 'dialogs.htm' as dlg %}
+{% include 'header_1.htm' %}
+<p>Содержимое сраницы
+{{ dlg.dialog_1('Внимание', 'Это тестовый диалог') }}
+{% include 'footer.htm' %}
