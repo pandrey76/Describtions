@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- для корректного отображения кориллицы сохраняйте шаблон html сераницы в кодировке UTF-8-->
+    <meta charset="UTF-8">
+    <base href="https://proproprogs.ru/">
+    <title>Про программирование</title>
+</head>
+<body>
+
+<ul>
+{% for u in users -%}
+    <li>{{u.name}}
+{% endfor -%}
+</ul>
+
+</body>
+</html>
