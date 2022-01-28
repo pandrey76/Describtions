@@ -37,7 +37,8 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 #set(SOURCES main.cpp)
 # or
 file(GLOB
-            CPPS "*.cpp")
+            CPPS "*.cpp"
+            CS   "*.c")
 # Собираем в один список все файлы по регулярному выражению
 # В нашем случае в переменную CPPS добавляются все файлы по шаблону *.cpp
 # То есть из директории, где лежит наш файл CMakeLists.txt будут найдены все файлы с
