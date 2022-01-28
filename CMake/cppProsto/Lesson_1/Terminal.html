@@ -1,0 +1,138 @@
+<pre><font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~</b></font>$ cmake
+cmake: /usr/local/lib/libcurl.so.4: no version information available (required by cmake)
+Usage
+
+  cmake [options] &lt;path-to-source&gt;
+  cmake [options] &lt;path-to-existing-build&gt;
+
+Specify a source directory to (re-)generate a build system for it in the
+current working directory.  Specify an existing build directory to
+re-generate its build system.
+
+Run &apos;cmake --help&apos; for more information.
+
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~</b></font>$ make
+make: *** Не заданы цели и не найден make-файл.  Останов.
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~</b></font>$ cmake -G
+cmake: /usr/local/lib/libcurl.so.4: no version information available (required by cmake)
+CMake Error: No generator specified for -G
+
+Generators
+  Unix Makefiles               = Generates standard UNIX makefiles.
+  Ninja                        = Generates build.ninja files.
+  Watcom WMake                 = Generates Watcom WMake makefiles.
+  CodeBlocks - Ninja           = Generates CodeBlocks project files.
+  CodeBlocks - Unix Makefiles  = Generates CodeBlocks project files.
+  CodeLite - Ninja             = Generates CodeLite project files.
+  CodeLite - Unix Makefiles    = Generates CodeLite project files.
+  Sublime Text 2 - Ninja       = Generates Sublime Text 2 project files.
+  Sublime Text 2 - Unix Makefiles
+                               = Generates Sublime Text 2 project files.
+  Kate - Ninja                 = Generates Kate project files.
+  Kate - Unix Makefiles        = Generates Kate project files.
+  Eclipse CDT4 - Ninja         = Generates Eclipse CDT 4.0 project files.
+  Eclipse CDT4 - Unix Makefiles= Generates Eclipse CDT 4.0 project files.
+  KDevelop3                    = Generates KDevelop 3 project files.
+  KDevelop3 - Unix Makefiles   = Generates KDevelop 3 project files.
+
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~</b></font>$ cmake --version
+cmake: /usr/local/lib/libcurl.so.4: no version information available (required by cmake)
+cmake version 3.10.2
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~</b></font>$ cd work
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work</b></font>$ cd Education
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education</b></font>$ cd Describtions
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions</b></font>$ cd CMake
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake</b></font>$ cd cppProsto
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto</b></font>$ cd Lesson_1
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ cmake .
+cmake: /usr/local/lib/libcurl.so.4: no version information available (required by cmake)
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/admin1/work/Education/Describtions/CMake/cppProsto/Lesson_1
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ ls
+CMakeCache.txt  cmake_install.cmake  main.cpp
+<font color="#729FCF"><b>CMakeFiles</b></font>      CMakeLists.txt       Makefile
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ cp ./CMakeLists.txt ~/CMakeLists.txt
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ cp ./main.cpp ~/main.cpp
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ rm -r CMakeFiles
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ ls
+CMakeCache.txt  cmake_install.cmake  CMakeLists.txt  main.cpp  Makefile
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ rm cmake_install*
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ ls
+CMakeCache.txt  CMakeLists.txt  main.cpp  Makefile
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ rm CMakeCach*
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ ls
+CMakeLists.txt  main.cpp  Makefile
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ rm Makefile
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ ls
+CMakeLists.txt  main.cpp
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ mkdir build
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ ls
+<font color="#729FCF"><b>build</b></font>  CMakeLists.txt  main.cpp
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1</b></font>$ cd build
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1/build</b></font>$ ls
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1/build</b></font>$ cmake ..
+cmake: /usr/local/lib/libcurl.so.4: no version information available (required by cmake)
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/admin1/work/Education/Describtions/CMake/cppProsto/Lesson_1/build
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1/build</b></font>$ ls
+CMakeCache.txt  <font color="#729FCF"><b>CMakeFiles</b></font>  cmake_install.cmake  Makefile
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1/build</b></font>$ ls
+CMakeCache.txt  <font color="#729FCF"><b>CMakeFiles</b></font>  cmake_install.cmake  Makefile
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1/build</b></font>$ make
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+<font color="#AD7FA8"><b>Scanning dependencies of target cmake_example_1</b></font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[ 50%] <font color="#4E9A06">Building CXX object CMakeFiles/cmake_example_1.dir/main.cpp.o</font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[100%] <font color="#8AE234"><b>Linking CXX executable cmake_example_1</b></font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[100%] Built target cmake_example_1
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1/build</b></font>$ ls
+CMakeCache.txt  <font color="#8AE234"><b>cmake_example_1</b></font>  <font color="#729FCF"><b>CMakeFiles</b></font>  cmake_install.cmake  Makefile
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1/build</b></font>$ ./cmake_example_1
+Usage: ./cmake_example_1 &lt;option(s)&gt;
+Options:
+	-h, --hellp Show this help message
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1/build</b></font>$ ./cmake_example_1 -h
+Usage: ./cmake_example_1 &lt;option(s)&gt;
+Options:
+	-h, --hellp Show this help message
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_1/build</b></font>$
+</pre>
