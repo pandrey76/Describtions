@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/stest.hpp"
+#include "stest.hpp"
 
 static void cmd_parse(const int args, const char* argv[]);
 static void print_help(std::string aName);

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/stest.hpp"
+#include "stest.hpp"
 
 void sTest::print_i()
 {
