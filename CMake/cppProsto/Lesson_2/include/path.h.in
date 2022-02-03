@@ -1,0 +1,9 @@
+#ifndef _PATH_H_
+#define _PATH_H_
+
+// Здесь cmake во время генерации Makefile файла подставит значения своих внутренних переменных
+// Если используется стандартная переменная cmake, то используется синтаксис вида @NAME_OF_STANDARD_VALUE@
+const char *g_source_path = "@PROJECT_SOURCE_DIR@";
+const char *g_binary_path = "@PROJECT_BINARY_DIR@";
+
+#endif  /*  _PATH_H_    */
