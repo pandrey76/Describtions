@@ -4,7 +4,7 @@
 struct sLibrary
 {
     void print_info();
-}
+};
 
 #endif /*  _LIBRARY_H_ */
 
