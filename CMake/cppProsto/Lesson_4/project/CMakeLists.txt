@@ -29,15 +29,15 @@ include_directories("${PROJECT_SOURCE_DIR}/include")
 file(GLOB
           CPP_SOURCES "src/*.cpp")
 
-link_directories(${CMAKE_SOURCE_DIR}/libs/shared)
-#link_directories(${CMAKE_SOURCE_DIR}/libs/static)
+# link_directories(${CMAKE_SOURCE_DIR}/libs/shared)
+link_directories(${CMAKE_SOURCE_DIR}/libs/static)
 
 add_executable(${PROJECT_NAME} ${CPP_SOURCES})
 
-target_link_libraries( ${PROJECT_NAME}
-                       cmake_example_4_shared_lib
-)
-
-#target_link_libraries( ${PROJECT_NAME}
-#                       cmake_example_4_static_lib
+# target_link_libraries( ${PROJECT_NAME}
+#                       cmake_example_4_shared_lib
 #)
+
+target_link_libraries( ${PROJECT_NAME}
+                       cmake_example_4_static_lib
+)
