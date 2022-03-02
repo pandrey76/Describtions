@@ -1,8 +1,7 @@
-#ifndef _VERSION_H_
-#define _VERSION_H_
+#ifndef __VER_H__
+#define __VER_H__
 
-// Если используется не стандартная переменная cmake, то
-// используется синтаксис вида ${NAME_OF_USER_VALUE}
-const char *g_version = "${cmake_example_2_VERSION}";
+// version variable that will be substituted by cmake
+const char* g_version = "${${PROJECT_NAME}_VERSION}";
 
-#endif  /*  _VERSION_H_    */
+#endif
