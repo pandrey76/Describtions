@@ -3,8 +3,9 @@
 
 struct sLibrary
 {
-    void print_info();
+  void print_info();
 };
 
-#endif /*  _LIBRARY_H_ */
+
+#endif /* _LIBRARY_H_ */
 

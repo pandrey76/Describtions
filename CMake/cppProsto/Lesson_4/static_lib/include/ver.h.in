@@ -1,8 +1,0 @@
-#ifndef _VERSION_H_
-#define _VERSION_H_
-
-// Если используется не стандартная переменная cmake, то
-// используется синтаксис вида ${NAME_OF_USER_VALUE}
-const char *g_version = "${cmake_example_2_VERSION}";
-
-#endif  /*  _VERSION_H_    */
