@@ -1,0 +1,71 @@
+<pre><font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~</b></font>$ cd work
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work</b></font>$ cd Education
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education</b></font>$ cd Describtions
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions</b></font>$ cd CMake
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake</b></font>$ cd cppProsto
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto</b></font>$ cd Lesson_5
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_5</b></font>$ ls
+<font color="#729FCF"><b>build</b></font>  CMakeLists.txt  <font color="#729FCF"><b>Doc</b></font>  <font color="#729FCF"><b>main</b></font>  <font color="#729FCF"><b>sub_project1</b></font>  <font color="#729FCF"><b>sub_project2</b></font>
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_5</b></font>$ mkdir build
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_5</b></font>$ cd build
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_5/build</b></font>$ cmake ..
+cmake: /usr/local/lib/libcurl.so.4: no version information available (required by cmake)
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/admin1/work/Education/Describtions/CMake/cppProsto/Lesson_5/build
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_5/build</b></font>$ make
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+<font color="#AD7FA8"><b>Scanning dependencies of target sublibrary_c</b></font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[ 16%] <font color="#4E9A06">Building C object sub_project1/CMakeFiles/sublibrary_c.dir/src/sub_c.c.o</font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[ 33%] <font color="#8AE234"><b>Linking C static library libsublibrary_c.a</b></font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[ 33%] Built target sublibrary_c
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+<font color="#AD7FA8"><b>Scanning dependencies of target sublibrary_cpp</b></font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[ 50%] <font color="#4E9A06">Building CXX object sub_project2/CMakeFiles/sublibrary_cpp.dir/src/sub_cpp.cpp.o</font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[ 66%] <font color="#8AE234"><b>Linking CXX static library libsublibrary_cpp.a</b></font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[ 66%] Built target sublibrary_cpp
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+<font color="#AD7FA8"><b>Scanning dependencies of target sub_main</b></font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[ 83%] <font color="#4E9A06">Building CXX object main/CMakeFiles/sub_main.dir/main.cpp.o</font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[100%] <font color="#8AE234"><b>Linking CXX executable sub_main</b></font>
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+[100%] Built target sub_main
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_5/build</b></font>$ cd main
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_5/build/main</b></font>$ ls
+<font color="#729FCF"><b>CMakeFiles</b></font>  cmake_install.cmake  Makefile  <font color="#8AE234"><b>sub_main</b></font>
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/work/Education/Describtions/CMake/cppProsto/Lesson_5/build/main</b></font>$ ./sub_main
+Main !
+c_func_1:6
+c_func_2:11 value = 100
+Hello from subCpp
+</pre>
