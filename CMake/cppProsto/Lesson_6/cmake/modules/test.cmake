@@ -21,7 +21,8 @@ find_package(MFC REQUIRED)
 if(MFC_FOUND)
   message("MFC_FOUND found!")
 else()
-  set(all_found_result "not found")
+  # Убираем кастыль, лучше так не делать
+  # set(all_found_result "not found")
   message("MFC_FOUND not found!")
 endif()
 

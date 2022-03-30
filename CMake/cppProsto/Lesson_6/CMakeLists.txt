@@ -36,11 +36,14 @@ else()
   message( FATAL_ERROR "${all_found_result}. Not all libraries was found!" )
 endif()
 
-
-# https://cmake.org/cmake/help/v3.0/command/message.html
+# Сообщения
+# Ссылка на документацию: https://cmake.org/cmake/help/v3.0/command/message.html
 message( STATUS         " status " )
 message( WARNING        " warning " )
 message( AUTHOR_WARNING " author warning " )
+# Процесс продолжается, но процесс генерации прекращается
 message( SEND_ERROR     " send error " )
+# Если какие-нибудь вещи устарели, например поиск и ро факту старые библиотеки можно выдать статус DEPRICATION
 message( DEPRECATION    " deprecation " )
+# Фатальная ошибка, процесс генерации прекращается
 message( FATAL_ERROR    " fatal error " )
