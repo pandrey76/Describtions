@@ -14,7 +14,7 @@
 
 **********************************************************************************
 
-make_minimum_required (VERSION 3.5)
+cmake_minimum_required (VERSION 3.5)
 
 # https://cmake.org/cmake/help/latest/manual/cmake-modules.7.html
 
@@ -24,6 +24,7 @@ project(package_find)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules
                       ${CMAKE_MODULE_PATH})
 
+# устанавливаем глобальную строковую переменную и она будет доступна во всех модулях.
 set(all_found_result "ok")
 
 # some actions
@@ -42,21 +43,60 @@ find_package(_OpenSSL)
 # Add an executable
 add_executable(package_find main.cpp)
 
+# Это кастыль, здесь после того как отработали все скрипты cmake мы сравниваем значение нашей глобальной переменной
+# и если она равна "ok", то значит все библиотеки корректно найдены.
 if(all_found_result STREQUAL "ok")
   message("all libraries was found")
 else()
-  message( FATAL_ERROR "Not all libraries was found!" )
+  # Когда мы выводим сообщение с "FATAL_ERROR", то генерация прекращается.
+  message( FATAL_ERROR "${all_found_result}. Not all libraries was found!" )
 endif()
 
-
-# https://cmake.org/cmake/help/v3.0/command/message.html
+# Сообщения
+# Ссылка на документацию: https://cmake.org/cmake/help/v3.0/command/message.html
 message( STATUS         " status " )
 message( WARNING        " warning " )
 message( AUTHOR_WARNING " author warning " )
-message( SEND_ERROR     " send error " )
+# Процесс продолжается, но процесс генерации прекращается
+# message( SEND_ERROR     " send error " )
+# Если какие-нибудь вещи устарели, например поиск и ро факту старые библиотеки можно выдать статус DEPRICATION
 message( DEPRECATION    " deprecation " )
-message( FATAL_ERROR    " fatal error " )
+# Фатальная ошибка, процесс генерации прекращается
+# message( FATAL_ERROR    " fatal error " )
 
 **********************************************************************************
 
 
+    File "test.cmake":
+
+**********************************************************************************
+
+find_package(OpenSSL)
+
+if(OPENSSL_FOUND)
+  message("TEST OpenSSL2 found!")
+else()
+  set(all_found_result "not found")
+  message("TEST OpenSSL2 not found!")
+endif()
+
+if(OPENSSL_LIBRARIES)
+  message("TEST OpenSSL2 lib found!")
+else()
+  set(all_found_result "not found")
+  message("TEST OpenSSL2 lib not found!")
+endif()
+
+# Флаг REQUIRED говорит о том, что если MFC не найден, то прекратить дальнейшую генерацию, т.е. эта библиотек нужна для
+# работы, но почему то это в данном примере не работает, поэтому используется кастыль с глобальной
+# переменной "all_found_result".
+find_package(MFC REQUIRED)
+if(MFC_FOUND)
+  message("MFC_FOUND found!")
+else()
+  # Убираем кастыль, лучше так не делать
+  # set(all_found_result "not found")
+  message("MFC_FOUND not found!")
+endif()
+
+**********************************************************************************
