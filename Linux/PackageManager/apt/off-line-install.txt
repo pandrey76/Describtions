@@ -1,0 +1,41 @@
+# Off-line установка пакетов без зависимостей
+# /////////////////////////////////////////////////////////////////
+# 1. Загрузка URLS в файл "apturls"
+admin1@ubuntu18:~$ apt-get -y install --print-uris make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev | cut -d\' -f2 | grep http:// > apturls
+
+# 2. Загрузка пакетов
+admin1@ubuntu18:~$ wget -i apturls
+
+# 3. Установка
+admin1@ubuntu18:~$ cd path-to-packages-storing-directory
+admin1@ubuntu18:~$ sudo dpkg -i *.deb
+# /////////////////////////////////////////////////////////////////
+
+# Пример автоматизированное скачивание пакетов для офф-лайн установки Python
+# /////////////////////////////////////////////////////////////////
+Depends
+Suggests
+Conflicts
+Breaks
+Replaces
+ Предзависит
+Зависит
+Конфликтует
+Ломает
+Предлагает
+Заменяет
+function download_package()     {
+for i in $(apt-cache depends "${1}" | grep -E 'Зависит|Предлагает' | cut -d  ':' -f 2,3 | sed -e s/'<'/''/ -e s/'>'/''/);
+do sudo apt-get download $i 2>>errors.txt;
+done;
+
+}
+
+
+for j in "${arr[@]}"
+do
+   echo "$j"
+    download_package "$j"
+done
+# /////////////////////////////////////////////////////////////////
+

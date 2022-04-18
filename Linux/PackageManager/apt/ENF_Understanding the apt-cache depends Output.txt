@@ -1,0 +1,65 @@
+URL: https://www.thecodeship.com/gnu-linux/understanding-apt-cache-depends-output/
+
+Understanding the apt-cache depends Output
+I was using apt-cache in Ubuntu to get a list of dependencies for a certain package and parse the output programmatically, eventually I wanted to programatically download and package them within an archive for offline installs later on. I was not really sure about the exact meanings of the output given that as I have never really used "apt-cache depends" before.
+
+Example output for Python:
+
+$ apt-cache depends python
+
+python
+  Depends: python2.7
+  Depends: python-minimal
+  Suggests: python-doc
+  Suggests: python-tk
+  Conflicts: python-central
+  Breaks:
+  Breaks:
+  Breaks:
+  Breaks: update-manager-core
+  Replaces: python-dev
+Another example output for Node:
+
+$ apt-cache depends node
+
+node
+  Depends: libax25
+  Depends: libc6
+  Depends: zlib1g
+  Depends: update-inetd
+ |Depends: openbsd-inetd
+  Depends:
+    openbsd-inetd
+    rlinetd
+    xinetd
+    inetutils-inetd
+So I did some reading on the debian policy manual and got some answers. Here is a brief summary of what sinked in:
+
+Recommends fields denote packages that are usually found with the target pacakage most of the time unless in unusual installations. Those packages are installed by apt by default with your target.
+
+Suggests fields denote packages that may be useful with your target package but not necessarily required, for example the Python doc is not required for the functioning of Python on your machine but could be useful to you in one way or another.
+
+Depends fields denote packages that are absolutely needed for the successful installation of your target package, they need to be installed and configured prior to your package installation.
+
+Breaks fields denote packages that are already installed on your system yet "break" the process of your installation as dpkg will refuse upacking and installing your target packages unless the broken package gets deconfigured first. This usually happens in case of package incompatibility with a certain version specification. So the automatic solution would be to upgrade(deconfigure) all the packages listed within this field.
+
+Conflicts fields denote packages that are already installed on your machine and declare an absolute incompatibility, those packages need to be uninstalled before installing the target package.
+
+Replaces fields denote packages that are already installed on your machine and will have some of their files replaced by the target package to be installed.
+
+As for the |(pipe flag), between two packages in the list it denotes an "or" relationship between packages following each other. For example in the second example:
+
+ Depends: update-inetd
+ |Depends: openbsd-inetd
+update-inetd and openbsd-inetd are alternatives to each other yet the first one(update-inetd) is preferred.
+
+As for the package names within brackets those are known as virtual packages. A virtual package is a generic name that applies to a group of packages which provide similar basic functionality.For example if you check the second output example when listing the dependencies of Node we notice the following:
+
+Depends:
+    openbsd-inetd
+    rlinetd
+    xinetd
+    inetutils-inetd
+In this case, "inet-superserver" is name of a virtual package(which isn't a real package) under which falls a list of real packages which equally satisfy the “Internet Super-Server” functionality/dependency that is needed for Node to work properly. Thus installing any of those options would be enough.
+
+I hope you have found this simple summary helpful. So much more information can be found within the Debian policy manual chapter 7
