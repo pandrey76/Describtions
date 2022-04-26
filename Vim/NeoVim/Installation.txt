@@ -1,0 +1,1 @@
+ sudo mv ~/nvim-0.7.0.appimage /usr/local/bin/nvimn
