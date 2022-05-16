@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre><font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/acvp/CryptographyVerificationServer/backend</b></font>$ cd ~
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~</b></font>$ cd Downloads
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads</b></font>$ wget --no-check-certificate https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
+--2022-05-16 22:26:03--  https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
+Распознаётся www.python.org (www.python.org)… 2a04:4e42:3::223, 151.101.12.223
+Подключение к www.python.org (www.python.org)|2a04:4e42:3::223|:443... соединение установлено.
+ПРЕДУПРЕЖДЕНИЕ: невозможно проверить сертификат www.python.org, выпущенный «CN=GlobalSign Atlas R3 DV TLS CA H2 2021,O=GlobalSign nv-sa,C=BE»:
+  Невозможно локально проверить подлинность запрашивающего.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 23016893 (22M) [application/octet-stream]
+Сохранение в: «Python-3.6.9.tgz»
+
+Python-3.6.9.tgz                                   100%[================================================================================================================&gt;]  21,95M   815KB/s    за 33s
+
+2022-05-16 22:26:37 (675 KB/s) - «Python-3.6.9.tgz» сохранён [23016893/23016893]
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads</b></font>$ sudo apt update
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads</b></font>$ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads</b></font>$ ls
+<font color="#EF2929"><b>doc.7z</b></font>  <font color="#AD7FA8"><b>photo_2022-04-29_15-00-14.jpg</b></font>  <font color="#EF2929"><b>Python-3.6.9.tgz</b></font>
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads</b></font>$  tar xvf Python-3.6.9.tgz
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads</b></font>$ ls
+<font color="#EF2929"><b>doc.7z</b></font>  <font color="#AD7FA8"><b>photo_2022-04-29_15-00-14.jpg</b></font>  <font color="#729FCF"><b>Python-3.6.9</b></font>  <font color="#EF2929"><b>Python-3.6.9.tgz</b></font>
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads</b></font>$ cd ./Python-3.6.9
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads/Python-3.6.9</b></font>$ ./configure --enable-optimizations --with-ensurepip=install --prefix=./.python-3.6.9
+configure: error: expected an absolute directory name for --prefix: ./.python-3.6.9
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads/Python-3.6.9</b></font>$ ./configure --enable-optimizations --with-ensurepip=install --prefix=/home/admin1/Downloads/.python-3.6.9
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads/Python-3.6.9</b></font>$  make -j 8
+<font color="#8AE234"><b>admin1@ubuntu18</b></font>:<font color="#729FCF"><b>~/Downloads/Python-3.6.9</b></font>$ sudo make altinstall
+</pre>
+</body>
+</html>
