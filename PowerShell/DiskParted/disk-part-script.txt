@@ -1,0 +1,52 @@
+rem ---------- Delete all partition from selected disk
+rem ----------------------------------------------------------------------
+clean
+rem ----------------------------------------------------------------------
+rem ---------- Convert disk to GPT format
+rem ----------------------------------------------------------------------
+convert gpt
+rem ----------------------------------------------------------------------
+rem ---------- Delete MSP partiton
+rem The "convert gpt" command create the MSR partiton at the beginning of selected disk.
+rem We delete MSR partition and create it after creation of "System boot partition"
+rem ----------------------------------------------------------------------
+select partition 1
+delete partition override
+rem ----------------------------------------------------------------------
+
+rem ---------- 1. Create the partition for veracrypt bootloader ----------
+rem ----------------------------------------------------------------------
+create partition primary size=8 
+rem ----------------------------------------------------------------------
+rem ---------- 2. Create Windows system boot partition ----------
+create partition efi size=100
+format quick fs=fat32 label="T7WBoot"
+assign letter="X"
+rem ---------- 3. Create Microsoft Reserved (MSR) partition ----------
+create partition msr size=32
+rem ---------- 4. Create the Windows partition ----------
+create partition primary size=30720
+format quick fs=ntfs label="T7Win"
+assign letter="Y"
+rem ---------- 5. Create Recovery partition ----------
+rem ----- Partition for storing recovery tools (winre.wim) and others -----
+create partition primary size=500
+format quick fs=ntfs label="Recovery"
+rem assign letter="R"
+set id="de94bba4-06d1-4d40-a16a-bfd50179d6ac"
+gpt attributes=0x8000000000000001
+rem ---------- 6. Create partition for Linux ----------
+rem ----- ~25% of disk space for primary partition  + 300 Mb for boot manager
+create partition primary size=31020
+format quick fs=ntfs
+rem ---------- 7. Create extra Common partition ----------
+rem ----- ~50% of disk space
+create partition primary
+format quick fs=ntfs label="T7Comm"
+assign letter="Z"
+list partition
+rem ---------- 8. Delete partition for Windows VeraCrypt bootloader ----------
+select partition 1
+delete partition
+list partition
+rem exit 
