@@ -3,6 +3,8 @@ find . -type f -print0 | xargs -0 sed -i 's|OFB|CBC|g'
 
 2. Files rename
 find . -type f -print |sed 's/\(.*\)OFB\(.*\)/mv & \1CBC\2/'| sh
+# "Grizzy.and.the.Lemmings.S01E01.Polar.Bear.1080p.NF.WEB-DL.DDP2.0.x264-AJP69.mkv" to view as "001.Polar.Bear.1080p.NF.WEB-DL.DDP2.0.x264-AJP69.mkv"
+find . -type f -print | sed 's!.*[Ss]01[Ee]\([[:digit:]][[:digit:]]\)[.]\(.*\)!mv & 0\1.\2!'| sh
 
 3. Directory rename
 find . -type d -print |sed 's/\(.*\)OFB\(.*\)/mv & \1CBC\2/'| sh
