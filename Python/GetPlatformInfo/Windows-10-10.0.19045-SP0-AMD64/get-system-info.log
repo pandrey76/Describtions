@@ -1,0 +1,135 @@
+************************************************************
+sys.platform:   win32
+************************************************************
+platform.version():   10.0.19045
+platform.architecture():   ('64bit', 'WindowsPE')
+platform.architecture()[0]:   64bit
+platform.architecture()[1]:   WindowsPE
+************************************************************
+platform.uname():   uname_result(system='Windows', node='DESKTOP-31HQC7K', release='10', version='10.0.19045', machine='AMD64')
+platform.uname()[0]:   Windows
+platform.uname()[1]:   DESKTOP-31HQC7K
+platform.uname()[5]:   Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+platform.uname():  in cycle 'for'.
+platform.uname()[0]:  Windows
+platform.uname()[1]:  DESKTOP-31HQC7K
+platform.uname()[2]:  10
+platform.uname()[3]:  10.0.19045
+platform.uname()[4]:  AMD64
+platform.uname()[5]:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+platform.processor():   Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+platform.platform():   Windows-10-10.0.19045-SP0
+platform.machine():   AMD64
+platform.version():   10.0.19045
+platform.release():   10
+platform.system():   Windows
+************************************************************
+os.getlogin():   admin1
+os.name:   nt
+os.environ:   environ({'ALLUSERSPROFILE': 'C:\\ProgramData', 'APPDATA': 'C:\\Users\\admin1\\AppData\\Roaming', 'COMMANDPROMPTTYPE': 'Native', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'COMPUTERNAME': 'DESKTOP-31HQC7K', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'DEVENVDIR': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\', 'DRIVERDATA': 'C:\\Windows\\System32\\Drivers\\DriverData', 'EXTENSIONSDKDIR': 'C:\\Program Files (x86)\\Microsoft SDKs\\Windows Kits\\10\\ExtensionSDKs', 'EXTERNAL_INCLUDE': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.36.32532\\include;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.36.32532\\ATLMFC\\include;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\cppwinrt;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um', 'FPS_BROWSER_APP_PROFILE_STRING': 'Internet Explorer', 'FPS_BROWSER_USER_PROFILE_STRING': 'Default', 'FRAMEWORK40VERSION': 'v4.0', 'FRAMEWORKDIR': 'C:\\Windows\\Microsoft.NET\\Framework64\\', 'FRAMEWORKDIR64': 'C:\\Windows\\Microsoft.NET\\Framework64\\', 'FRAMEWORKVERSION': 'v4.0.30319', 'FRAMEWORKVERSION64': 'v4.0.30319', 'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\admin1', 'INCLUDE': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.36.32532\\include;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.36.32532\\ATLMFC\\include;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22000.0\\\\cppwinrt;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um', 'LIB': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.36.32532\\lib\\x64;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\lib\\um\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.22000.0\\ucrt\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\\\lib\\10.0.22000.0\\\\um\\x64', 'LIBPATH': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.36.32532\\lib\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.36.32532\\lib\\x86\\store\\references;C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.22000.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.22000.0;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319', 'LOCALAPPDATA': 'C:\\Users\\admin1\\AppData\\Local', 'LOGONSERVER': '\\\\DESKTOP-31HQC7K', 'NETFXSDKDIR': 'C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\', 'NUMBER_OF_PROCESSORS': '8', 'ONEDRIVE': 'C:\\Users\\admin1\\OneDrive', 'OS': 'Windows_NT', 'PATH': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\VC\\VCPackages;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22000.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Common Files\\Acronis\\VirtualFile\\;C:\\Program Files (x86)\\Common Files\\Acronis\\VirtualFile64\\;C:\\Program Files (x86)\\Common Files\\Acronis\\FileProtector\\;C:\\Program Files (x86)\\Common Files\\Acronis\\FileProtector64\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Strawberry\\c\\bin;C:\\Strawberry\\perl\\site\\bin;C:\\Strawberry\\perl\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\admin1\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin1\\.dotnet\\tools;c:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin;C:\\Program Files\\Neovim\\bin;C:\\Users\\admin1\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin1\\AppData\\Local\\JetBrains\\Toolbox\\scripts;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'PLATFORM': 'x64', 'PROCESSOR_ARCHITECTURE': 'AMD64', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 58 Stepping 9, GenuineIntel', 'PROCESSOR_LEVEL': '6', 'PROCESSOR_REVISION': '3a09', 'PROGRAMDATA': 'C:\\ProgramData', 'PROGRAMFILES': 'C:\\Program Files', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'PROGRAMW6432': 'C:\\Program Files', 'PROMPT': '$P$G', 'PSMODULEPATH': 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules', 'PUBLIC': 'C:\\Users\\Public', 'SESSIONNAME': 'Console', 'SYSTEMDRIVE': 'C:', 'SYSTEMROOT': 'C:\\Windows', 'TEMP': 'C:\\Users\\admin1\\AppData\\Local\\Temp', 'TMP': 'C:\\Users\\admin1\\AppData\\Local\\Temp', 'UCRTVERSION': '10.0.22000.0', 'UNIVERSALCRTSDKDIR': 'C:\\Program Files (x86)\\Windows Kits\\10\\', 'USERDOMAIN': 'DESKTOP-31HQC7K', 'USERDOMAIN_ROAMINGPROFILE': 'DESKTOP-31HQC7K', 'USERNAME': 'admin1', 'USERPROFILE': 'C:\\Users\\admin1', 'VBOX_MSI_INSTALL_PATH': 'C:\\Program Files\\Oracle\\VirtualBox\\', 'VCIDEINSTALLDIR': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\VC\\', 'VCINSTALLDIR': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\', 'VCTOOLSINSTALLDIR': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.36.32532\\', 'VCTOOLSREDISTDIR': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Redist\\MSVC\\14.36.32532\\', 'VCTOOLSVERSION': '14.36.32532', 'VISUALSTUDIOVERSION': '17.0', 'VS170COMNTOOLS': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\', 'VSCMD_ARG_APP_PLAT': 'Desktop', 'VSCMD_ARG_HOST_ARCH': 'x64', 'VSCMD_ARG_TGT_ARCH': 'x64', 'VSCMD_VER': '17.6.0', 'VSINSTALLDIR': 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\', 'WINDIR': 'C:\\Windows', 'WINDOWSLIBPATH': 'C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.22000.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.22000.0', 'WINDOWSSDKBINPATH': 'C:\\Program Files (x86)\\Windows Kits\\10\\bin\\', 'WINDOWSSDKDIR': 'C:\\Program Files (x86)\\Windows Kits\\10\\', 'WINDOWSSDKLIBVERSION': '10.0.22000.0\\', 'WINDOWSSDKVERBINPATH': 'C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22000.0\\', 'WINDOWSSDKVERSION': '10.0.22000.0\\', 'WINDOWSSDK_EXECUTABLEPATH_X64': 'C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\', 'WINDOWSSDK_EXECUTABLEPATH_X86': 'C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\', '__DOTNET_ADD_64BIT': '1', '__DOTNET_PREFERRED_BITNESS': '64', '__VSCMD_PREINIT_PATH': 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files (x86)\\Common Files\\Acronis\\VirtualFile\\;C:\\Program Files (x86)\\Common Files\\Acronis\\VirtualFile64\\;C:\\Program Files (x86)\\Common Files\\Acronis\\FileProtector\\;C:\\Program Files (x86)\\Common Files\\Acronis\\FileProtector64\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Strawberry\\c\\bin;C:\\Strawberry\\perl\\site\\bin;C:\\Strawberry\\perl\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\admin1\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin1\\.dotnet\\tools;c:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin;C:\\Program Files\\Neovim\\bin;C:\\Users\\admin1\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin1\\AppData\\Local\\JetBrains\\Toolbox\\scripts;'})
+     ALLUSERSPROFILE  ->  C:\ProgramData
+     APPDATA  ->  C:\Users\admin1\AppData\Roaming
+     COMMANDPROMPTTYPE  ->  Native
+     COMMONPROGRAMFILES  ->  C:\Program Files\Common Files
+     COMMONPROGRAMFILES(X86)  ->  C:\Program Files (x86)\Common Files
+     COMMONPROGRAMW6432  ->  C:\Program Files\Common Files
+     COMPUTERNAME  ->  DESKTOP-31HQC7K
+     COMSPEC  ->  C:\Windows\system32\cmd.exe
+     DEVENVDIR  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\
+     DRIVERDATA  ->  C:\Windows\System32\Drivers\DriverData
+     EXTENSIONSDKDIR  ->  C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+     EXTERNAL_INCLUDE  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\ATLMFC\include;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+     FPS_BROWSER_APP_PROFILE_STRING  ->  Internet Explorer
+     FPS_BROWSER_USER_PROFILE_STRING  ->  Default
+     FRAMEWORK40VERSION  ->  v4.0
+     FRAMEWORKDIR  ->  C:\Windows\Microsoft.NET\Framework64\
+     FRAMEWORKDIR64  ->  C:\Windows\Microsoft.NET\Framework64\
+     FRAMEWORKVERSION  ->  v4.0.30319
+     FRAMEWORKVERSION64  ->  v4.0.30319
+     HOMEDRIVE  ->  C:
+     HOMEPATH  ->  \Users\admin1
+     INCLUDE  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\ATLMFC\include;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+     LIB  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\lib\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.22000.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.22000.0\\um\x64
+     LIBPATH  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\lib\x64;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22000.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22000.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+     LOCALAPPDATA  ->  C:\Users\admin1\AppData\Local
+     LOGONSERVER  ->  \\DESKTOP-31HQC7K
+     NETFXSDKDIR  ->  C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\
+     NUMBER_OF_PROCESSORS  ->  8
+     ONEDRIVE  ->  C:\Users\admin1\OneDrive
+     OS  ->  Windows_NT
+     PATH  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\bin\HostX64\x64;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\VC\VCPackages;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\Tools\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Common Files\Acronis\VirtualFile\;C:\Program Files (x86)\Common Files\Acronis\VirtualFile64\;C:\Program Files (x86)\Common Files\Acronis\FileProtector\;C:\Program Files (x86)\Common Files\Acronis\FileProtector64\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Git\cmd;C:\Users\admin1\AppData\Local\Microsoft\WindowsApps;C:\Users\admin1\.dotnet\tools;c:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin;C:\Program Files\Neovim\bin;C:\Users\admin1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\admin1\AppData\Local\JetBrains\Toolbox\scripts;;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\VC\Linux\bin\ConnectionManagerExe
+     PATHEXT  ->  .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+     PLATFORM  ->  x64
+     PROCESSOR_ARCHITECTURE  ->  AMD64
+     PROCESSOR_IDENTIFIER  ->  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+     PROCESSOR_LEVEL  ->  6
+     PROCESSOR_REVISION  ->  3a09
+     PROGRAMDATA  ->  C:\ProgramData
+     PROGRAMFILES  ->  C:\Program Files
+     PROGRAMFILES(X86)  ->  C:\Program Files (x86)
+     PROGRAMW6432  ->  C:\Program Files
+     PROMPT  ->  $P$G
+     PSMODULEPATH  ->  C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+     PUBLIC  ->  C:\Users\Public
+     SESSIONNAME  ->  Console
+     SYSTEMDRIVE  ->  C:
+     SYSTEMROOT  ->  C:\Windows
+     TEMP  ->  C:\Users\admin1\AppData\Local\Temp
+     TMP  ->  C:\Users\admin1\AppData\Local\Temp
+     UCRTVERSION  ->  10.0.22000.0
+     UNIVERSALCRTSDKDIR  ->  C:\Program Files (x86)\Windows Kits\10\
+     USERDOMAIN  ->  DESKTOP-31HQC7K
+     USERDOMAIN_ROAMINGPROFILE  ->  DESKTOP-31HQC7K
+     USERNAME  ->  admin1
+     USERPROFILE  ->  C:\Users\admin1
+     VBOX_MSI_INSTALL_PATH  ->  C:\Program Files\Oracle\VirtualBox\
+     VCIDEINSTALLDIR  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\VC\
+     VCINSTALLDIR  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\
+     VCTOOLSINSTALLDIR  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\
+     VCTOOLSREDISTDIR  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Redist\MSVC\14.36.32532\
+     VCTOOLSVERSION  ->  14.36.32532
+     VISUALSTUDIOVERSION  ->  17.0
+     VS170COMNTOOLS  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\Tools\
+     VSCMD_ARG_APP_PLAT  ->  Desktop
+     VSCMD_ARG_HOST_ARCH  ->  x64
+     VSCMD_ARG_TGT_ARCH  ->  x64
+     VSCMD_VER  ->  17.6.0
+     VSINSTALLDIR  ->  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\
+     WINDIR  ->  C:\Windows
+     WINDOWSLIBPATH  ->  C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.22000.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.22000.0
+     WINDOWSSDKBINPATH  ->  C:\Program Files (x86)\Windows Kits\10\bin\
+     WINDOWSSDKDIR  ->  C:\Program Files (x86)\Windows Kits\10\
+     WINDOWSSDKLIBVERSION  ->  10.0.22000.0\
+     WINDOWSSDKVERBINPATH  ->  C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\
+     WINDOWSSDKVERSION  ->  10.0.22000.0\
+     WINDOWSSDK_EXECUTABLEPATH_X64  ->  C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\
+     WINDOWSSDK_EXECUTABLEPATH_X86  ->  C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+     __DOTNET_ADD_64BIT  ->  1
+     __DOTNET_PREFERRED_BITNESS  ->  64
+     __VSCMD_PREINIT_PATH  ->  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Common Files\Acronis\VirtualFile\;C:\Program Files (x86)\Common Files\Acronis\VirtualFile64\;C:\Program Files (x86)\Common Files\Acronis\FileProtector\;C:\Program Files (x86)\Common Files\Acronis\FileProtector64\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\Git\cmd;C:\Users\admin1\AppData\Local\Microsoft\WindowsApps;C:\Users\admin1\.dotnet\tools;c:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin;C:\Program Files\Neovim\bin;C:\Users\admin1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\admin1\AppData\Local\JetBrains\Toolbox\scripts;
+************************************************************
+cpuinfo.get_cpu_info():   {'python_version': '3.11.6.final.0 (64 bit)', 'cpuinfo_version': [9, 0, 0], 'cpuinfo_version_string': '9.0.0', 'arch': 'X86_64', 'bits': 64, 'count': 8, 'arch_string_raw': 'AMD64', 'vendor_id_raw': 'GenuineIntel', 'brand_raw': 'Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz', 'hz_advertised_friendly': '3.4000 GHz', 'hz_actual_friendly': '3.9010 GHz', 'hz_advertised': [3400000000, 0], 'hz_actual': [3901000000, 0], 'l2_cache_size': 1048576, 'stepping': 9, 'model': 58, 'family': 6, 'l3_cache_size': 8388608, 'flags': ['3dnow', 'acpi', 'aes', 'apic', 'avx', 'clflush', 'cmov', 'cx16', 'cx8', 'de', 'ds_cpl', 'dtes64', 'dts', 'erms', 'est', 'f16c', 'fpu', 'fxsr', 'ht', 'ia64', 'lahf_lm', 'mca', 'mce', 'mmx', 'monitor', 'msr', 'mtrr', 'osxsave', 'pae', 'pat', 'pbe', 'pcid', 'pclmulqdq', 'pdcm', 'pge', 'pni', 'popcnt', 'pse', 'pse36', 'rdrnd', 'sep', 'serial', 'smep', 'smx', 'ss', 'sse', 'sse2', 'sse4_1', 'sse4_2', 'ssse3', 'tm', 'tm2', 'tsc', 'tscdeadline', 'vme', 'vmx', 'x2apic', 'xsave', 'xtpr'], 'l2_cache_line_size': 256, 'l2_cache_associativity': 6}
+cpuinfo.get_cpu_info(['brand_raw']):   Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+cpuinfo.get_cpu_info() by sorted list
+     arch  ->  X86_64
+     arch_string_raw  ->  AMD64
+     bits  ->  64
+     brand_raw  ->  Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+     count  ->  8
+     cpuinfo_version  ->  [9, 0, 0]
+     cpuinfo_version_string  ->  9.0.0
+     family  ->  6
+     flags  ->  ['3dnow', 'acpi', 'aes', 'apic', 'avx', 'clflush', 'cmov', 'cx16', 'cx8', 'de', 'ds_cpl', 'dtes64', 'dts', 'erms', 'est', 'f16c', 'fpu', 'fxsr', 'ht', 'ia64', 'lahf_lm', 'mca', 'mce', 'mmx', 'monitor', 'msr', 'mtrr', 'osxsave', 'pae', 'pat', 'pbe', 'pcid', 'pclmulqdq', 'pdcm', 'pge', 'pni', 'popcnt', 'pse', 'pse36', 'rdrnd', 'sep', 'serial', 'smep', 'smx', 'ss', 'sse', 'sse2', 'sse4_1', 'sse4_2', 'ssse3', 'tm', 'tm2', 'tsc', 'tscdeadline', 'vme', 'vmx', 'x2apic', 'xsave', 'xtpr']
+     hz_actual  ->  [3901000000, 0]
+     hz_actual_friendly  ->  3.9010 GHz
+     hz_advertised  ->  [3400000000, 0]
+     hz_advertised_friendly  ->  3.4000 GHz
+     l2_cache_associativity  ->  6
+     l2_cache_line_size  ->  256
+     l2_cache_size  ->  1048576
+     l3_cache_size  ->  8388608
+     model  ->  58
+     python_version  ->  3.11.6.final.0 (64 bit)
+     stepping  ->  9
+     vendor_id_raw  ->  GenuineIntel
+************************************************************
