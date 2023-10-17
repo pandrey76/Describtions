@@ -1,0 +1,37 @@
+sys.platform:   unknown
+platform.architecture():   ('64bit', '')
+platform.architecture():  in cycle 'for'.
+platform.architecture()[0]:  64bit
+platform.architecture()[1]:
+platform.uname():   uname_result(system='Darwin', node='iPhone-XR', release='21.3.0', version='Darwin Kernel Version 21.3.0: Wed Jan  5 21:44:43 PST 2022; root:xnu-8019.80.24~23/RELEASE_ARM64_T8020', machine='iPhone11,8', processor='')
+platform.uname():  in cycle 'for'.
+platform.uname()[0]:  Darwin
+platform.uname()[1]:  iPhone-XR
+platform.uname()[2]:  21.3.0
+platform.uname()[3]:  Darwin Kernel Version 21.3.0: Wed Jan  5 21:44:43 PST 2022; root:xnu-8019.80.24~23/RELEASE_ARM64_T8020
+platform.uname()[4]:  iPhone11,8
+platform.uname()[5]:
+platform.system():   Darwin
+platform.node():   iPhone-XR
+platform.release():   21.3.0
+platform.version():   Darwin Kernel Version 21.3.0: Wed Jan  5 21:44:43 PST 2022; root:xnu-8019.80.24~23/RELEASE_ARM64_T8020
+platform.machine():   iPhone11,8
+platform.processor():
+platform.platform():   Darwin-21.3.0-iPhone11,8-64bit
+platform.mac_ver():   ('', ('', '', ''), '')
+platform.linux_distribution():   ('', '', '')
+platform.win32_ver():   ('', '', '', '')
+os.getlogin():   mobile
+os.name:   posix
+os.environ:   environ({'XPC_FLAGS': '0x0', 'CFFIXED_USER_HOME': '/private/var/mobile/Containers/Data/Application/CEB60219-9902-4C0C-984A-320B15BB8780', 'XPC_SERVICE_NAME': 'UIKitApplication:com.ff9x.python[bf07][rb-legacy]', 'SHELL': '/bin/sh', 'USER': 'mobile', 'TMPDIR': '/private/var/mobile/Containers/Data/Application/CEB60219-9902-4C0C-984A-320B15BB8780/tmp/', 'SQLITE_EXEMPT_PATH_FROM_VNODE_GUARDS': '/private/var/mobile/Containers/Data/Application/CEB60219-9902-4C0C-984A-320B15BB8780/Library/Caches', 'HOME': '/private/var/mobile/Containers/Data/Application/CEB60219-9902-4C0C-984A-320B15BB8780', '__CF_USER_TEXT_ENCODING': '0x1F5:0:0', 'LOGNAME': 'mobile', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'})
+     CFFIXED_USER_HOME  ->  /private/var/mobile/Containers/Data/Application/CEB60219-9902-4C0C-984A-320B15BB8780
+     HOME  ->  /private/var/mobile/Containers/Data/Application/CEB60219-9902-4C0C-984A-320B15BB8780
+     LOGNAME  ->  mobile
+     PATH  ->  /usr/bin:/bin:/usr/sbin:/sbin
+     SHELL  ->  /bin/sh
+     SQLITE_EXEMPT_PATH_FROM_VNODE_GUARDS  ->  /private/var/mobile/Containers/Data/Application/CEB60219-9902-4C0C-984A-320B15BB8780/Library/Caches
+     TMPDIR  ->  /private/var/mobile/Containers/Data/Application/CEB60219-9902-4C0C-984A-320B15BB8780/tmp/
+     USER  ->  mobile
+     XPC_FLAGS  ->  0x0
+     XPC_SERVICE_NAME  ->  UIKitApplication:com.ff9x.python[bf07][rb-legacy]
+     __CF_USER_TEXT_ENCODING  ->  0x1F5:0:0
