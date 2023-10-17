@@ -1,0 +1,79 @@
+************************************************************
+sys.platform:   linux
+************************************************************
+platform.version():   #1 SMP Debian 5.9.1-1kali2 (2020-10-29)
+platform.architecture():   ('32bit', 'ELF')
+platform.architecture()[0]:   32bit
+platform.architecture()[1]:   ELF
+************************************************************
+platform.uname():   uname_result(system='Linux', node='kali-Asus-Atom-NetBook', release='5.9.0-kali1-686-pae', version='#1 SMP Debian 5.9.1-1kali2 (2020-10-29)', machine='i686')
+platform.uname()[0]:   Linux
+platform.uname()[1]:   kali-Asus-Atom-NetBook
+platform.uname()[5]:   
+platform.uname():  in cycle 'for'.
+platform.uname()[0]:  Linux
+platform.uname()[1]:  kali-Asus-Atom-NetBook
+platform.uname()[2]:  5.9.0-kali1-686-pae
+platform.uname()[3]:  #1 SMP Debian 5.9.1-1kali2 (2020-10-29)
+platform.uname()[4]:  i686
+platform.uname()[5]:  
+platform.processor():   
+platform.platform():   Linux-5.9.0-kali1-686-pae-i686-with-glibc2.34
+platform.machine():   i686
+platform.version():   #1 SMP Debian 5.9.1-1kali2 (2020-10-29)
+platform.release():   5.9.0-kali1-686-pae
+platform.system():   Linux
+************************************************************
+os.getlogin():   admin1
+os.name:   posix
+os.environ:   environ({'COLORFGBG': '15;0', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DESKTOP_SESSION': 'lightdm-xsession', 'DISPLAY': ':0.0', 'GDMSESSION': 'lightdm-xsession', 'HOME': '/home/admin1', 'LANG': 'ru_RU.utf8', 'LANGUAGE': '', 'LOGNAME': 'admin1', 'PANEL_GDK_CORE_DEVICE_EVENTS': '0', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games', 'PWD': '/home/admin1/Describtions/Python/GetPlatformInfo', 'QT_ACCESSIBILITY': '1', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'QT_QPA_PLATFORMTHEME': 'qt5ct', 'SESSION_MANAGER': 'local/kali-Asus-Atom-NetBook:@/tmp/.ICE-unix/761,unix/kali-Asus-Atom-NetBook:/tmp/.ICE-unix/761', 'SHELL': '/usr/bin/zsh', 'SSH_AGENT_PID': '801', 'SSH_AUTH_SOCK': '/tmp/ssh-5UaHPhG73auG/agent.761', 'TERM': 'xterm-256color', 'USER': 'admin1', 'WINDOWID': '0', 'XAUTHORITY': '/home/admin1/.Xauthority', 'XDG_CONFIG_DIRS': '/etc/xdg', 'XDG_CURRENT_DESKTOP': 'XFCE', 'XDG_DATA_DIRS': '/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm/data/admin1', 'XDG_MENU_PREFIX': 'xfce-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XDG_SEAT': 'seat0', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'XDG_SESSION_CLASS': 'user', 'XDG_SESSION_DESKTOP': 'lightdm-xsession', 'XDG_SESSION_ID': '2', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_SESSION_TYPE': 'x11', 'XDG_VTNR': '7', '_JAVA_OPTIONS': '-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true', 'SHLVL': '1', 'OLDPWD': '/home/admin1/Describtions', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'LESS_TERMCAP_mb': '\x1b[1;31m', 'LESS_TERMCAP_md': '\x1b[1;36m', 'LESS_TERMCAP_me': '\x1b[0m', 'LESS_TERMCAP_so': '\x1b[01;33m', 'LESS_TERMCAP_se': '\x1b[0m', 'LESS_TERMCAP_us': '\x1b[1;32m', 'LESS_TERMCAP_ue': '\x1b[0m', '_': '/usr/bin/python3'})
+     COLORFGBG  ->  15;0
+     DBUS_SESSION_BUS_ADDRESS  ->  unix:path=/run/user/1000/bus
+     DESKTOP_SESSION  ->  lightdm-xsession
+     DISPLAY  ->  :0.0
+     GDMSESSION  ->  lightdm-xsession
+     HOME  ->  /home/admin1
+     LANG  ->  ru_RU.utf8
+     LANGUAGE  ->  
+     LESS_TERMCAP_mb  ->  [1;31m
+     LESS_TERMCAP_md  ->  [1;36m
+     LESS_TERMCAP_me  ->  [0m
+     LESS_TERMCAP_se  ->  [0m
+     LESS_TERMCAP_so  ->  [01;33m
+     LESS_TERMCAP_ue  ->  [0m
+     LESS_TERMCAP_us  ->  [1;32m
+     LOGNAME  ->  admin1
+     LS_COLORS  ->  rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+     OLDPWD  ->  /home/admin1/Describtions
+     PANEL_GDK_CORE_DEVICE_EVENTS  ->  0
+     PATH  ->  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+     PWD  ->  /home/admin1/Describtions/Python/GetPlatformInfo
+     QT_ACCESSIBILITY  ->  1
+     QT_AUTO_SCREEN_SCALE_FACTOR  ->  0
+     QT_QPA_PLATFORMTHEME  ->  qt5ct
+     SESSION_MANAGER  ->  local/kali-Asus-Atom-NetBook:@/tmp/.ICE-unix/761,unix/kali-Asus-Atom-NetBook:/tmp/.ICE-unix/761
+     SHELL  ->  /usr/bin/zsh
+     SHLVL  ->  1
+     SSH_AGENT_PID  ->  801
+     SSH_AUTH_SOCK  ->  /tmp/ssh-5UaHPhG73auG/agent.761
+     TERM  ->  xterm-256color
+     USER  ->  admin1
+     WINDOWID  ->  0
+     XAUTHORITY  ->  /home/admin1/.Xauthority
+     XDG_CONFIG_DIRS  ->  /etc/xdg
+     XDG_CURRENT_DESKTOP  ->  XFCE
+     XDG_DATA_DIRS  ->  /usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share
+     XDG_GREETER_DATA_DIR  ->  /var/lib/lightdm/data/admin1
+     XDG_MENU_PREFIX  ->  xfce-
+     XDG_RUNTIME_DIR  ->  /run/user/1000
+     XDG_SEAT  ->  seat0
+     XDG_SEAT_PATH  ->  /org/freedesktop/DisplayManager/Seat0
+     XDG_SESSION_CLASS  ->  user
+     XDG_SESSION_DESKTOP  ->  lightdm-xsession
+     XDG_SESSION_ID  ->  2
+     XDG_SESSION_PATH  ->  /org/freedesktop/DisplayManager/Session0
+     XDG_SESSION_TYPE  ->  x11
+     XDG_VTNR  ->  7
+     _  ->  /usr/bin/python3
+     _JAVA_OPTIONS  ->  -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+************************************************************

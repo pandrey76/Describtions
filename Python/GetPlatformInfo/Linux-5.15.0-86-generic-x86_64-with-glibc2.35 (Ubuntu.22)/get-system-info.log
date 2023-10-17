@@ -1,0 +1,102 @@
+************************************************************
+sys.platform:   linux
+************************************************************
+platform.version():   #96-Ubuntu SMP Wed Sep 20 08:23:49 UTC 2023
+platform.architecture():   ('64bit', 'ELF')
+platform.architecture()[0]:   64bit
+platform.architecture()[1]:   ELF
+************************************************************
+platform.uname():   uname_result(system='Linux', node='X53S-I5-UbuntuV19-K53SV', release='5.15.0-86-generic', version='#96-Ubuntu SMP Wed Sep 20 08:23:49 UTC 2023', machine='x86_64')
+platform.uname()[0]:   Linux
+platform.uname()[1]:   X53S-I5-UbuntuV19-K53SV
+platform.uname()[5]:   x86_64
+platform.uname():  in cycle 'for'.
+platform.uname()[0]:  Linux
+platform.uname()[1]:  X53S-I5-UbuntuV19-K53SV
+platform.uname()[2]:  5.15.0-86-generic
+platform.uname()[3]:  #96-Ubuntu SMP Wed Sep 20 08:23:49 UTC 2023
+platform.uname()[4]:  x86_64
+platform.uname()[5]:  x86_64
+platform.processor():   x86_64
+platform.platform():   Linux-5.15.0-86-generic-x86_64-with-glibc2.35
+platform.machine():   x86_64
+platform.version():   #96-Ubuntu SMP Wed Sep 20 08:23:49 UTC 2023
+platform.release():   5.15.0-86-generic
+platform.system():   Linux
+************************************************************
+os.getlogin():   admin1
+os.name:   posix
+os.environ:   environ({'SYSTEMD_EXEC_PID': '2940', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SESSION_MANAGER': 'local/X53S-I5-UbuntuV19-K53SV:@/tmp/.ICE-unix/2914,unix/X53S-I5-UbuntuV19-K53SV:/tmp/.ICE-unix/2914', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/16cc9a8c_ee00_4fef_ab98_b42b91177d8f', 'LANG': 'ru_RU.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'PWD': '/home/admin1/Describtions/Python/GetPlatformInfo', 'WAYLAND_DISPLAY': 'wayland-0', 'QT_IM_MODULE': 'ibus', 'USER': 'admin1', 'DESKTOP_SESSION': 'ubuntu', 'XDG_MENU_PREFIX': 'gnome-', 'OLDPWD': '/home/admin1/Describtions/Python', 'HOME': '/home/admin1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', '_': '/usr/bin/python3', 'GTK_MODULES': 'gail:atk-bridge', 'VTE_VERSION': '6800', 'XDG_SESSION_DESKTOP': 'ubuntu', 'QT_ACCESSIBILITY': '1', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'GNOME_SETUP_DISPLAY': ':1', 'LOGNAME': 'admin1', 'GNOME_TERMINAL_SERVICE': ':1.122', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'XMODIFIERS': '@im=ibus', 'SHELL': '/usr/bin/zsh', 'XDG_SESSION_TYPE': 'wayland', 'XDG_RUNTIME_DIR': '/run/user/1000', 'USERNAME': 'admin1', 'COLORTERM': 'truecolor', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.P0UMC2', 'XDG_DATA_DIRS': '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GDMSESSION': 'ubuntu', 'DISPLAY': ':0', 'SHLVL': '1', 'ZSH': '/home/admin1/.oh-my-zsh', 'PAGER': 'less', 'LESS': '-R', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'})
+     COLORTERM  ->  truecolor
+     DBUS_SESSION_BUS_ADDRESS  ->  unix:path=/run/user/1000/bus
+     DESKTOP_SESSION  ->  ubuntu
+     DISPLAY  ->  :0
+     GDMSESSION  ->  ubuntu
+     GNOME_DESKTOP_SESSION_ID  ->  this-is-deprecated
+     GNOME_SETUP_DISPLAY  ->  :1
+     GNOME_SHELL_SESSION_MODE  ->  ubuntu
+     GNOME_TERMINAL_SCREEN  ->  /org/gnome/Terminal/screen/16cc9a8c_ee00_4fef_ab98_b42b91177d8f
+     GNOME_TERMINAL_SERVICE  ->  :1.122
+     GTK_MODULES  ->  gail:atk-bridge
+     HOME  ->  /home/admin1
+     LANG  ->  ru_RU.UTF-8
+     LESS  ->  -R
+     LOGNAME  ->  admin1
+     LSCOLORS  ->  Gxfxcxdxbxegedabagacad
+     LS_COLORS  ->  rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+     OLDPWD  ->  /home/admin1/Describtions/Python
+     PAGER  ->  less
+     PATH  ->  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+     PWD  ->  /home/admin1/Describtions/Python/GetPlatformInfo
+     QT_ACCESSIBILITY  ->  1
+     QT_IM_MODULE  ->  ibus
+     SESSION_MANAGER  ->  local/X53S-I5-UbuntuV19-K53SV:@/tmp/.ICE-unix/2914,unix/X53S-I5-UbuntuV19-K53SV:/tmp/.ICE-unix/2914
+     SHELL  ->  /usr/bin/zsh
+     SHLVL  ->  1
+     SSH_AGENT_LAUNCHER  ->  gnome-keyring
+     SSH_AUTH_SOCK  ->  /run/user/1000/keyring/ssh
+     SYSTEMD_EXEC_PID  ->  2940
+     TERM  ->  xterm-256color
+     USER  ->  admin1
+     USERNAME  ->  admin1
+     VTE_VERSION  ->  6800
+     WAYLAND_DISPLAY  ->  wayland-0
+     XAUTHORITY  ->  /run/user/1000/.mutter-Xwaylandauth.P0UMC2
+     XDG_CURRENT_DESKTOP  ->  ubuntu:GNOME
+     XDG_DATA_DIRS  ->  /usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+     XDG_MENU_PREFIX  ->  gnome-
+     XDG_RUNTIME_DIR  ->  /run/user/1000
+     XDG_SESSION_CLASS  ->  user
+     XDG_SESSION_DESKTOP  ->  ubuntu
+     XDG_SESSION_TYPE  ->  wayland
+     XMODIFIERS  ->  @im=ibus
+     ZSH  ->  /home/admin1/.oh-my-zsh
+     _  ->  /usr/bin/python3
+************************************************************
+cpuinfo.get_cpu_info():   {'python_version': '3.10.12.final.0 (64 bit)', 'cpuinfo_version': [9, 0, 0], 'cpuinfo_version_string': '9.0.0', 'arch': 'X86_64', 'bits': 64, 'count': 4, 'arch_string_raw': 'x86_64', 'vendor_id_raw': 'GenuineIntel', 'brand_raw': 'Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz', 'hz_advertised_friendly': '2.3000 GHz', 'hz_actual_friendly': '2.9000 GHz', 'hz_advertised': [2300000000, 0], 'hz_actual': [2900000000, 0], 'stepping': 7, 'model': 42, 'family': 6, 'flags': ['acpi', 'aes', 'aperfmperf', 'apic', 'arat', 'arch_perfmon', 'avx', 'bts', 'clflush', 'cmov', 'constant_tsc', 'cpuid', 'cx16', 'cx8', 'de', 'ds_cpl', 'dtes64', 'dtherm', 'dts', 'epb', 'ept', 'est', 'flexpriority', 'flush_l1d', 'fpu', 'fxsr', 'ht', 'ibpb', 'ibrs', 'ida', 'lahf_lm', 'lm', 'mca', 'mce', 'md_clear', 'mmx', 'monitor', 'msr', 'mtrr', 'nonstop_tsc', 'nopl', 'nx', 'osxsave', 'pae', 'pat', 'pbe', 'pcid', 'pclmulqdq', 'pdcm', 'pebs', 'pge', 'pln', 'pni', 'popcnt', 'pse', 'pse36', 'pti', 'pts', 'rdtscp', 'rep_good', 'sep', 'ss', 'ssbd', 'sse', 'sse2', 'sse4_1', 'sse4_2', 'ssse3', 'stibp', 'syscall', 'tm', 'tm2', 'tpr_shadow', 'tsc', 'tsc_deadline_timer', 'tscdeadline', 'vme', 'vmx', 'vnmi', 'vpid', 'x2apic', 'xsave', 'xsaveopt', 'xtopology', 'xtpr'], 'l3_cache_size': 3145728, 'l2_cache_size': 524288, 'l1_data_cache_size': 65536, 'l1_instruction_cache_size': 65536, 'l2_cache_line_size': 256, 'l2_cache_associativity': 6}
+cpuinfo.get_cpu_info(['brand_raw']):   Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+cpuinfo.get_cpu_info() by sorted list
+     arch  ->  X86_64
+     arch_string_raw  ->  x86_64
+     bits  ->  64
+     brand_raw  ->  Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+     count  ->  4
+     cpuinfo_version  ->  [9, 0, 0]
+     cpuinfo_version_string  ->  9.0.0
+     family  ->  6
+     flags  ->  ['acpi', 'aes', 'aperfmperf', 'apic', 'arat', 'arch_perfmon', 'avx', 'bts', 'clflush', 'cmov', 'constant_tsc', 'cpuid', 'cx16', 'cx8', 'de', 'ds_cpl', 'dtes64', 'dtherm', 'dts', 'epb', 'ept', 'est', 'flexpriority', 'flush_l1d', 'fpu', 'fxsr', 'ht', 'ibpb', 'ibrs', 'ida', 'lahf_lm', 'lm', 'mca', 'mce', 'md_clear', 'mmx', 'monitor', 'msr', 'mtrr', 'nonstop_tsc', 'nopl', 'nx', 'osxsave', 'pae', 'pat', 'pbe', 'pcid', 'pclmulqdq', 'pdcm', 'pebs', 'pge', 'pln', 'pni', 'popcnt', 'pse', 'pse36', 'pti', 'pts', 'rdtscp', 'rep_good', 'sep', 'ss', 'ssbd', 'sse', 'sse2', 'sse4_1', 'sse4_2', 'ssse3', 'stibp', 'syscall', 'tm', 'tm2', 'tpr_shadow', 'tsc', 'tsc_deadline_timer', 'tscdeadline', 'vme', 'vmx', 'vnmi', 'vpid', 'x2apic', 'xsave', 'xsaveopt', 'xtopology', 'xtpr']
+     hz_actual  ->  [2900000000, 0]
+     hz_actual_friendly  ->  2.9000 GHz
+     hz_advertised  ->  [2300000000, 0]
+     hz_advertised_friendly  ->  2.3000 GHz
+     l1_data_cache_size  ->  65536
+     l1_instruction_cache_size  ->  65536
+     l2_cache_associativity  ->  6
+     l2_cache_line_size  ->  256
+     l2_cache_size  ->  524288
+     l3_cache_size  ->  3145728
+     model  ->  42
+     python_version  ->  3.10.12.final.0 (64 bit)
+     stepping  ->  7
+     vendor_id_raw  ->  GenuineIntel
+************************************************************
