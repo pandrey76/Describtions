@@ -1,0 +1,2 @@
+# Поиск и копирование результата в определённое место (Git-bash под Windows 10)
+ find /d -type f -name "*.log" -not \(-path "System Volume Information"\) -exec cp '{}' '/z/GitHub/pandrey76/Describtions/Python/GetPlatformInfo/' ';'
