@@ -1,0 +1,79 @@
+sys.platform:   linux
+platform.architecture():   ('64bit', '')
+platform.architecture():  in cycle 'for'.
+platform.architecture()[0]:  64bit
+platform.architecture()[1]:
+platform.uname():   uname_result(system='Linux', node='localhost', release='4.14.117-perf-g0f2347b', version='#1 SMP PREEMPT Wed Jun 9 21:51:51 CST 2021', machine='aarch64')
+platform.uname():  in cycle 'for'.
+platform.uname()[0]:  Linux
+platform.uname()[1]:  localhost
+platform.uname()[2]:  4.14.117-perf-g0f2347b
+platform.uname()[3]:  #1 SMP PREEMPT Wed Jun 9 21:51:51 CST 2021
+platform.uname()[4]:  aarch64
+platform.uname()[5]:
+platform.system():   Linux
+platform.node():   localhost
+platform.release():   4.14.117-perf-g0f2347b
+platform.version():   #1 SMP PREEMPT Wed Jun 9 21:51:51 CST 2021
+platform.machine():   aarch64
+platform.processor():
+platform.platform():   Linux-4.14.117-perf-g0f2347b-aarch64-with-libc
+platform.mac_ver():   ('', ('', '', ''), '')
+module 'platform' has no attribute 'linux_distribution'
+platform.win32_ver():   ('', '', '', '')
+os.getlogin():   u0_a349
+os.name:   posix
+os.environ:   environ({'DEX2OATBOOTCLASSPATH': '/apex/com.android.runtime/javalib/core-oj.jar:/apex/com.android.runtime/javalib/core-libart.jar:/apex/com.android.runtime/javalib/okhttp.jar:/apex/com.android.runtime/javalib/bouncycastle.jar:/apex/com.android.runtime/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/miuisdk@boot.jar:/system/framework/miuisystemsdk@boot.jar:/system/framework/android.test.base.jar:/system/framework/tcmiface.jar:/system/framework/telephony-ext.jar:/system/framework/qcom.fmradio.jar:/system/framework/com.nxp.nfc.nq.jar:/system/framework/QPerformance.jar:/system/framework/UxPerformance.jar:/system/framework/WfdCommon.jar', 'LIBRARY_PATH': '/data/user/0/ru.iiec.pydroid3/files/lib/gcc/aarch64-linux-android/11.1.0/', 'BACKCOMPAT_SHEBANG': '1', 'ANDROID_RUNTIME_ROOT': '/apex/com.android.runtime', 'EXTERNAL_STORAGE': '/sdcard', 'MPLBACKEND': 'Agg', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib', 'XDG_CACHE_HOME': '/data/user/0/ru.iiec.pydroid3/cache', 'BROWSER': 'mybrowser %s', 'HOME': '/data/user/0/ru.iiec.pydroid3/app_HOME', 'OLDPWD': '/', 'TERMINFO': '/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/share/terminfo', 'ANDROID_ASSETS': '/system/app', 'SSL_CERT_FILE': '/data/user/0/ru.iiec.pydroid3/files/cert.pem', 'BOOTCLASSPATH': '/apex/com.android.runtime/javalib/core-oj.jar:/apex/com.android.runtime/javalib/core-libart.jar:/apex/com.android.runtime/javalib/okhttp.jar:/apex/com.android.runtime/javalib/bouncycastle.jar:/apex/com.android.runtime/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/miuisdk@boot.jar:/system/framework/miuisystemsdk@boot.jar:/system/framework/android.test.base.jar:/system/framework/tcmiface.jar:/system/framework/telephony-ext.jar:/system/framework/qcom.fmradio.jar:/system/framework/com.nxp.nfc.nq.jar:/system/framework/QPerformance.jar:/system/framework/UxPerformance.jar:/system/framework/WfdCommon.jar:/apex/com.android.conscrypt/javalib/conscrypt.jar:/apex/com.android.media/javalib/updatable-media.jar', 'ANDROID_ORIGFNAME': '/data/user/0/ru.iiec.pydroid3/files/temp_iiec_codefile.py', 'KERAS_BACKEND': 'theano', 'BACKCOMPAT_BUSYBOX': '/data/user/0/ru.iiec.pydroid3/files/busybox', 'TMPDIR': '/data/user/0/ru.iiec.pydroid3/cache', 'CMAKE_INCLUDE_PATH': '/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android:/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/include', 'DOWNLOAD_CACHE': '/data/cache', 'PKG_CONFIG_PATH': '/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/pkgconfig', 'TERM': 'screen', 'ANDROID_DATA': '/data', 'APP_PACKAGE': '/data/app/ru.iiec.pydroid3-_YM-accXOM4Ezbz24UyrCg``/base.apk', 'PATH':'/data/user/0/ru.iiec.pydroid3/files:/data/user/0/ru.iiec.pydroid3/files/bin:/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin:/busybox-virtual:/product/bin:/apex/com.android.runtime/bin:/system/bin:/system/xbin:/vendor/bin', 'ANDROID_ROOT': '/system', 'PYDROID3_LICENSE': 'Accepted', 'BACKCOMPAT_BIN': '/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin', 'JOBLIB_MULTIPROCESSING': '0', 'ANDROID_ENTRYPOINT': '/data/user/0/ru.iiec.pydroid3/files/temp_iiec_codefile.py', 'ANDROID_TZDATA_ROOT': '/apex/com.android.tzdata', 'ANDROID_SOCKET_zygote': '20', 'BACKCOMPAT_DISABLE_FDSAN': '1', 'SHELL': '/data/user/0/ru.iiec.pydroid3/files/sh', 'PYDROID_PACKAGE': 'ru.iiec.pydroid3', 'ANDROID_SOCKET_usap_pool_primary': '21', 'BACKCOMPAT_SHELL': '/data/user/0/ru.iiec.pydroid3/files/sh', 'BACKCOMPAT_PIE': '1', 'BACKCOMPAT_SCOPE': '/data/', 'CONFIG_SHELL': '/data/user/0/ru.iiec.pydroid3/files/sh', 'CMAKE_LIBRARY_PATH': '/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android:/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib:/data/user/0/ru.iiec.pydroid3/files/lib/gcc/aarch64-linux-android/11.1.0/', 'ASEC_MOUNTPOINT': '/mnt/asec', 'PWD': '/storage/emulated/0', 'LC_ALL': 'en_US.UTF-8', 'SYSTEMSERVERCLASSPATH': '/system/framework/services.jar:/system/framework/ethernet-service.jar:/system/framework/wifi-service.jar:/system/framework/com.android.location.provider.jar', 'PYTHONPATH': '/storage/emulated/0', 'OMP_NUM_THREADS': '8', 'ANDROID_STORAGE': '/storage', 'BACKCOMPAT_CURRENTEXE': '/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin/python3', 'PYDROID_RPC': '/data/user/0/ru.iiec.pydroid3/files/RPCServer.socket', 'ANDROID_BOOTLOGO': '1'})
+     ANDROID_ASSETS  ->  /system/app
+     ANDROID_BOOTLOGO  ->  1
+     ANDROID_DATA  ->  /data
+     ANDROID_ENTRYPOINT  ->  /data/user/0/ru.iiec.pydroid3/files/temp_iiec_codefile.py
+     ANDROID_ORIGFNAME  ->  /data/user/0/ru.iiec.pydroid3/files/temp_iiec_codefile.py
+     ANDROID_ROOT  ->  /system
+     ANDROID_RUNTIME_ROOT  ->  /apex/com.android.runtime
+     ANDROID_SOCKET_usap_pool_primary  ->  21
+     ANDROID_SOCKET_zygote  ->  20
+     ANDROID_STORAGE  ->  /storage
+     ANDROID_TZDATA_ROOT  ->  /apex/com.android.tzdata
+     APP_PACKAGE  ->  /data/app/ru.iiec.pydroid3-_YM-accXOM4Ezbz24UyrCg``/base.apk
+     ASEC_MOUNTPOINT  ->  /mnt/asec
+     BACKCOMPAT_BIN  ->  /data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin
+     BACKCOMPAT_BUSYBOX  ->  /data/user/0/ru.iiec.pydroid3/files/busybox
+     BACKCOMPAT_CURRENTEXE  ->  /data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin/python3
+     BACKCOMPAT_DISABLE_FDSAN  ->  1
+     BACKCOMPAT_PIE  ->  1
+     BACKCOMPAT_SCOPE  ->  /data/
+     BACKCOMPAT_SHEBANG  ->  1
+     BACKCOMPAT_SHELL  ->  /data/user/0/ru.iiec.pydroid3/files/sh
+     BOOTCLASSPATH  ->  /apex/com.android.runtime/javalib/core-oj.jar:/apex/com.android.runtime/javalib/core-libart.jar:/apex/com.android.runtime/javalib/okhttp.jar:/apex/com.android.runtime/javalib/bouncycastle.jar:/apex/com.android.runtime/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/miuisdk@boot.jar:/system/framework/miuisystemsdk@boot.jar:/system/framework/android.test.base.jar:/system/framework/tcmiface.jar:/system/framework/telephony-ext.jar:/system/framework/qcom.fmradio.jar:/system/framework/com.nxp.nfc.nq.jar:/system/framework/QPerformance.jar:/system/framework/UxPerformance.jar:/system/framework/WfdCommon.jar:/apex/com.android.conscrypt/javalib/conscrypt.jar:/apex/com.android.media/javalib/updatable-media.jar
+     BROWSER  ->  mybrowser %s
+     CMAKE_INCLUDE_PATH  ->  /data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android:/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/include
+CMAKE_LIBRARY_PATH  ->  /data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android:/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib:/data/user/0/ru.iiec.pydroid3/files/lib/gcc/aarch64-linux-android/11.1.0/
+     CONFIG_SHELL  ->  /data/user/0/ru.iiec.pydroid3/files/sh
+     DEX2OATBOOTCLASSPATH  ->  /apex/com.android.runtime/javalib/core-oj.jar:/apex/com.android.runtime/javalib/core-libart.jar:/apex/com.android.runtime/javalib/okhttp.jar:/apex/com.android.runtime/javalib/bouncycastle.jar:/apex/com.android.runtime/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/miuisdk@boot.jar:/system/framework/miuisystemsdk@boot.jar:/system/framework/android.test.base.jar:/system/framework/tcmiface.jar:/system/framework/telephony-ext.jar:/system/framework/qcom.fmradio.jar:/system/framework/com.nxp.nfc.nq.jar:/system/framework/QPerformance.jar:/system/framework/UxPerformance.jar:/system/framework/WfdCommon.jar
+     DOWNLOAD_CACHE  ->  /data/cache
+     EXTERNAL_STORAGE  ->  /sdcard
+     HOME  ->  /data/user/0/ru.iiec.pydroid3/app_HOME
+     JOBLIB_MULTIPROCESSING  ->  0
+     KERAS_BACKEND  ->  theano
+     LC_ALL  ->  en_US.UTF-8
+     LD_LIBRARY_PATH  ->  /data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib
+     LIBRARY_PATH  ->  /data/user/0/ru.iiec.pydroid3/files/lib/gcc/aarch64-linux-android/11.1.0/
+     MPLBACKEND  ->  Agg
+     OLDPWD  ->  /
+     OMP_NUM_THREADS  ->  8
+     PATH  ->  /data/user/0/ru.iiec.pydroid3/files:/data/user/0/ru.iiec.pydroid3/files/bin:/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin:/busybox-virtual:/product/bin:/apex/com.android.runtime/bin:/system/bin:/system/xbin:/vendor/bin
+     PKG_CONFIG_PATH  ->  /data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/pkgconfig
+     PWD  ->  /storage/emulated/0
+     PYDROID3_LICENSE  ->  Accepted
+     PYDROID_PACKAGE  ->  ru.iiec.pydroid3
+     PYDROID_RPC  ->  /data/user/0/ru.iiec.pydroid3/files/RPCServer.socket
+     PYTHONPATH  ->  /storage/emulated/0
+     SHELL  ->  /data/user/0/ru.iiec.pydroid3/files/sh
+     SHLVL  ->  1
+     SSL_CERT_FILE  ->  /data/user/0/ru.iiec.pydroid3/files/cert.pem
+     SYSTEMSERVERCLASSPATH  ->  /system/framework/services.jar:/system/framework/ethernet-service.jar:/system/framework/wifi-service.jar:/system/framework/com.android.location.provider.jar
+     TERM  ->  screen
+     TERMINFO  ->  /data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/share/terminfo
+     TMPDIR  ->  /data/user/0/ru.iiec.pydroid3/cache
+     XDG_CACHE_HOME  ->  /data/user/0/ru.iiec.pydroid3/cache
