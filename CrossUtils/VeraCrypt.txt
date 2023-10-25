@@ -1,0 +1,29 @@
+
+####################### Windows #######################
+
+Mounting
+************************************************************
+VeraCrypt.exe /v "\Device\Harddisk0\Partition7" /l z /k c:\Users\admin1\Documents\T7-Common- /pim 0 /tryemptypass /quit /silent /force /e
+************************************************************
+
+Unmounting
+************************************************************
+veracrypt.exe /dismount Z /quit /silent /force
+************************************************************
+
+####################### Windows #######################
+
+
+####################### Linux #######################
+
+Mounting
+************************************************************
+ sudo veracrypt --text --mount /dev/sdb7 /run/media/admin1/T7Common --password "" --pim 0 --keyfiles "/home/admin1/Documents/T7-Common-" --protect-hidden no --slot 10 --verbose
+************************************************************
+
+Unmounting
+************************************************************
+sudo veracrypt --text --dismount --slot 10 --verbose
+************************************************************
+
+####################### Linux #######################
